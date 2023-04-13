@@ -1,0 +1,3 @@
+interface Jogavel {
+    void jogar();
+}

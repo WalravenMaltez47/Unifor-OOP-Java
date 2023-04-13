@@ -1,0 +1,3 @@
+interface Autenticavel {
+    void autenticar();
+}

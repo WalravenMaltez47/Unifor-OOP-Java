@@ -21,7 +21,6 @@ public class Main {
         System.out.println("digite 'start' para comecar");
         String start = prompt.next();
 
-
         if (start.equals("start") || start.equals("START")) {
             int dado;
             int Round;
@@ -83,7 +82,6 @@ public class Main {
 
                         // special ability
                         System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele esta com " + muqueMan.healing(5) + " hp ");
-
                     } break;
 
                 case 2:
@@ -103,7 +101,6 @@ public class Main {
                             else {
                                 System.out.println("Raio-Laser sofre +5 de dano e agora esta com "+raioLaser.dano(5)+ " hp ");
                             }
-
                         }
                         else if (dado >= 3 && dado <= 5) {
                             System.out.println("'Q' para 'Mega Optic'");
@@ -114,7 +111,6 @@ public class Main {
                             else {
                                 System.out.println("Raio-Laser sofre +6 de dano e agora esta com "+raioLaser.dano(6)+ " hp ");
                             }
-
                         }
                         else if (dado == 6) {
                             System.out.println("'Z' para 'Super Optic'");
@@ -125,7 +121,6 @@ public class Main {
                             else {
                                 System.out.println("Raio-Laser sofre +7 de dano e agora esta com "+raioLaser.dano(7)+ " hp ");
                             }
-
                         }
 
                         // Alien
@@ -144,8 +139,6 @@ public class Main {
 
                         // special ability
                         System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien esta com "+evilAlien.dano(multiplicadorDeDano)+ " hp ");
-
-
                     } break;
 
                 case 3:
@@ -163,7 +156,6 @@ public class Main {
                             else {
                                 System.out.println("Relampago sofre +5 de dano e agora esta com "+relampago.dano(5)+ " hp ");
                             }
-
                         }
                         else if (dado >= 3 && dado <= 5) {
                             System.out.println("Q para 'Lightning Storm'");
@@ -174,7 +166,6 @@ public class Main {
                             else {
                                 System.out.println("Relampago sofre +6 de dano e agora esta com "+relampago.dano(6)+ " hp ");
                             }
-
                         }
                         else if (dado == 6) {
                             System.out.println("'Z' para 'Hail Storm'");
@@ -203,7 +194,6 @@ public class Main {
 
                         // special ability
                         System.out.println("abilidade especial do Relampago adiciona +3 de dano ao alien, agora Alien esta com "+evilAlien.dano(3)+ " hp ");
-
                     } break;
             }
 

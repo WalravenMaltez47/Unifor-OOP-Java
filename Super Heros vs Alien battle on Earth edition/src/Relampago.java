@@ -1,4 +1,4 @@
-public class Relampago extends AtributosInicias{
+public class Relampago extends BuffsAndDebuffs {
     Relampago(int vida) {
         this.vida=vida;
     }

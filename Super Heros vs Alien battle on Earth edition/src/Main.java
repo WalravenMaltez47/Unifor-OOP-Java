@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -23,45 +22,67 @@ public class Main {
         String start = prompt.next();
 
 
-        if (start.equals("start")) {
+        if (start.equals("start") || start.equals("START")) {
             int dado;
             int Round;
             String golpe;
-
 
             switch (escolhaDoPersonagem) {
                 // Muque-Man
                 case 1:
                     for (Round = 1; Round <= 6; Round++) {
-                        // tipo de golpe
-                        System.out.println("x para 'Chute'");
-                        System.out.println("y para 'Tornado'");
-                        System.out.println("z para 'Berserker'");
-                        golpe = prompt.next();
 
                         System.out.println("Vez do Muque-Man.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
 
                         if (dado == 1 || dado == 2) {
-                            System.out.println("Alien sofreu +10 de dano de Muque-Man e agora esta com " + evilAlien.dano(10) + " hp ");
-                        } else if (dado >= 3 && dado <= 5) {
-                            System.out.println("Alien sofreu +20 de dano de Muque-Man e agora esta com " + evilAlien.dano(20) + " hp ");
-                        } else if (dado == 6) {
-                            System.out.println("Alien sofreu +40 de dano de Muque-Man e agora esta com " + evilAlien.dano(40) + " hp ");
+                            System.out.println("'E' para 'Chute'");
+                            golpe = prompt.next();
+                            if (golpe.equals("e")||golpe.equals("E")) {
+                                System.out.println("Alien sofreu +10 de dano de Muque-Man e agora esta com " + evilAlien.dano(10) + " hp ");
+                            }
+                            else {
+                                System.out.println("Muque-Man sofre +5 de dano e agora esta com "+muqueMan.dano(5)+" hp");
+                            }
+                        }
+                        else if (dado >= 3 && dado <= 5) {
+                            System.out.println("'Q' para 'Tornado'");
+                            golpe = prompt.next();
+                            if (golpe.equals("q")||golpe.equals("Q")) {
+                                System.out.println("Alien sofreu +20 de dano de Muque-Man e agora esta com " + evilAlien.dano(20) + " hp ");
+                            }
+                            else {
+                                System.out.println("Muque-Man sofre +6 de dano e agora esta com "+muqueMan.dano(6)+" hp");
+                            }
+                        }
+                        else if (dado == 6) {
+                            System.out.println("'Z' para 'Berserker'");
+                            golpe = prompt.next();
+                            if (golpe.equals("z")||golpe.equals("Z")) {
+                                System.out.println("Alien sofreu +40 de dano de Muque-Man e agora esta com " + evilAlien.dano(40) + " hp ");
+                            }
+                            else {
+                                System.out.println("Muque-Man sofre +7 de dano e agora esta com "+muqueMan.dano(7)+" hp");
+                            }
                         }
 
                         System.out.println("Vez do Alien.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
                         if (dado == 1 || dado == 2) {
+                            System.out.println("Alien utiliza 'Split Kick!'");
                             System.out.println("Muque-Man sofreu +10 de dano de Alien e agora esta com " + muqueMan.dano(10) + " hp ");
-                        } else if (dado >= 3 && dado <= 5) {
+                        }
+                        else if (dado >= 3 && dado <= 5) {
+                            System.out.println("Alien utiliza 'Bit Laser'");
                             System.out.println("Muque-Man sofreu +20 de dano de Alien e agora esta com " + muqueMan.dano(20) + " hp ");
-                        } else if (dado == 6) {
+                        }
+                        else if (dado == 6) {
+                            System.out.println("Alien utiliza 'Shockwave!'");
                             System.out.println("Muque-Man sofreu +40 de dano de Alien e agora esta com " + muqueMan.dano(40) + " hp ");
                         }
 
                         // special ability
-                        System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele esta com " + muqueMan.habilidadeEspecial(5) + " hp ");
+                        System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele esta com " + muqueMan.healing(5) + " hp ");
 
                     } break;
 
@@ -69,36 +90,60 @@ public class Main {
                 case 2:
                     for (Round = 1; Round <= 6; Round++) {
 
-                        int somatorio = 3*Round;
-                        // tipo de golpe
-                        System.out.println("x para 'Optic Blast'");
-                        System.out.println("y para 'Mega Optic'");
-                        System.out.println("z para 'Super Optic'");
-                        golpe = prompt.next();
+                        int multiplicadorDeDano = (3*Round);
 
                         System.out.println("Vez do Muque-Man.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
 
                         if (dado == 1 || dado == 2) {
-                            System.out.println("Alien sofreu +10 de dano de Muque-Man e agora esta com " + evilAlien.dano(10) + " hp ");
-                        } else if (dado >= 3 && dado <= 5) {
-                            System.out.println("Alien sofreu +20 de dano de Muque-Man e agora esta com " + evilAlien.dano(20) + " hp ");
-                        } else if (dado == 6) {
-                            System.out.println("Alien sofreu +40 de dano de Muque-Man e agora esta com " + evilAlien.dano(40) + " hp ");
+                            System.out.println("'E' para 'Optic Blast'");
+                            golpe = prompt.next();
+                            if (golpe.equals("e") || golpe.equals("E")) {
+                                System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora esta com " + evilAlien.dano(10) + " hp ");
+                            }
+                            else {
+                                System.out.println("Raio-Laser sofre +5 de dano e agora esta com "+raioLaser.dano(5)+ " hp ");
+                            }
+
+                        }
+                        else if (dado >= 3 && dado <= 5) {
+                            System.out.println("'Q' para 'Mega Optic'");
+                            golpe = prompt.next();
+                            if (golpe.equals("q")||golpe.equals("Q")) {
+                                System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora esta com " + evilAlien.dano(20) + " hp ");
+                            }
+                            else {
+                                System.out.println("Raio-Laser sofre +6 de dano e agora esta com "+raioLaser.dano(6)+ " hp ");
+                            }
+
+                        }
+                        else if (dado == 6) {
+                            System.out.println("'Z' para 'Super Optic'");
+                            golpe = prompt.next();
+                            if (golpe.equals("z")||golpe.equals("Z")) {
+                                System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora esta com " + evilAlien.dano(40) + " hp ");
+                            }
+                            else {
+                                System.out.println("Raio-Laser sofre +7 de dano e agora esta com "+raioLaser.dano(7)+ " hp ");
+                            }
+
                         }
 
                         System.out.println("Vez do Alien.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
                         if (dado == 1 || dado == 2) {
-                            System.out.println("Muque-Man sofreu +10 de dano de Alien e agora esta com " + muqueMan.dano(10) + " hp ");
+                            System.out.println("Alien utiliza 'Split Kick!'");
+                            System.out.println("Raio-Laser sofreu +10 de dano de Alien e agora esta com " + raioLaser.dano(10) + " hp ");
                         } else if (dado >= 3 && dado <= 5) {
-                            System.out.println("Muque-Man sofreu +20 de dano de Alien e agora esta com " + muqueMan.dano(20) + " hp ");
+                            System.out.println("Alien utiliza 'Bit Laser'");
+                            System.out.println("Raio-Laser sofreu +20 de dano de Alien e agora esta com " + raioLaser.dano(20) + " hp ");
                         } else if (dado == 6) {
-                            System.out.println("Muque-Man sofreu +40 de dano de Alien e agora esta com " + muqueMan.dano(40) + " hp ");
+                            System.out.println("Alien utiliza 'Shockwave!'");
+                            System.out.println("Raio-Laser sofreu +40 de dano de Alien e agora esta com " + raioLaser.dano(40) + " hp ");
                         }
 
                         // special ability
-                        System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien esta com "+evilAlien.dano(somatorio)+ " hp ");
+                        System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien esta com "+evilAlien.dano(multiplicadorDeDano)+ " hp ");
 
 
                     } break;
@@ -106,31 +151,54 @@ public class Main {
                 // Relampago
                 case 3:
                     for (Round = 1; Round <= 6; Round++) {
-                        // tipo de golpe
-                        System.out.println("x para 'Lightning Attack'");
-                        System.out.println("y para 'Lightning Storm'");
-                        System.out.println("z para 'Hail Storm'");
-                        golpe = prompt.next();
 
                         System.out.println("Vez do Muque-Man.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
 
                         if (dado == 1 || dado == 2) {
-                            System.out.println("Alien sofreu +10 de dano de Muque-Man e agora esta com " + evilAlien.dano(10) + " hp ");
-                        } else if (dado >= 3 && dado <= 5) {
-                            System.out.println("Alien sofreu +20 de dano de Muque-Man e agora esta com " + evilAlien.dano(20) + " hp ");
-                        } else if (dado == 6) {
-                            System.out.println("Alien sofreu +40 de dano de Muque-Man e agora esta com " + evilAlien.dano(40) + " hp ");
+                            System.out.println("'E' para 'Lightning Attack'");
+                            golpe = prompt.next();
+                            if (golpe.equals("e")||golpe.equals("E")) {
+                                System.out.println("Alien sofreu +10 de dano de Relampago e agora esta com " + evilAlien.dano(10) + " hp ");
+                            }
+                            else {
+                                System.out.println("Relampago sofre +5 de dano e agora esta com "+relampago.dano(5)+ " hp ");
+                            }
+
+                        }
+                        else if (dado >= 3 && dado <= 5) {
+                            System.out.println("Q para 'Lightning Storm'");
+                            golpe = prompt.next();
+                            if (golpe.equals("q")||golpe.equals("Q")) {
+                                System.out.println("Alien sofreu +20 de dano de Relampago e agora esta com " + evilAlien.dano(20) + " hp ");
+                            }
+                            else {
+                                System.out.println("Relampago sofre +6 de dano e agora esta com "+relampago.dano(6)+ " hp ");
+                            }
+
+                        }
+                        else if (dado == 6) {
+                            System.out.println("'Z' para 'Hail Storm'");
+                            golpe = prompt.next();
+                            if (golpe.equals("z")||golpe.equals("Z")) {
+                                System.out.println("Alien sofreu +40 de dano de Relampago e agora esta com " + evilAlien.dano(40) + " hp ");
+                            }
+                            else {
+                                System.out.println("Relampago sofre +7 de dano e agora esta com "+relampago.dano(7)+ " hp ");
+                            }
                         }
 
                         System.out.println("Vez do Alien.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
                         if (dado == 1 || dado == 2) {
-                            System.out.println("Muque-Man sofreu +10 de dano de Alien e agora esta com " + muqueMan.dano(10) + " hp ");
+                            System.out.println("Alien utiliza 'Split Kick!'");
+                            System.out.println("Relampago sofreu +10 de dano de Alien e agora esta com " + relampago.dano(10) + " hp ");
                         } else if (dado >= 3 && dado <= 5) {
-                            System.out.println("Muque-Man sofreu +20 de dano de Alien e agora esta com " + muqueMan.dano(20) + " hp ");
+                            System.out.println("Alien utiliza 'Bit Laser'");
+                            System.out.println("Relampago sofreu +20 de dano de Alien e agora esta com " + relampago.dano(20) + " hp ");
                         } else if (dado == 6) {
-                            System.out.println("Muque-Man sofreu +40 de dano de Alien e agora esta com " + muqueMan.dano(40) + " hp ");
+                            System.out.println("Alien utiliza 'Shockwave!'");
+                            System.out.println("Relampago sofreu +40 de dano de Alien e agora esta com " + relampago.dano(40) + " hp ");
                         }
 
                         // special ability
@@ -142,11 +210,14 @@ public class Main {
 
             // DETERMINAR QUEM VENCEU:
             if (muqueMan.getVidaFinal() > evilAlien.getVidaFinal()) {
-                System.out.println("O vencedor e Muqueman");
+                System.out.println();
+                System.out.println("O vencedor é Muqueman");
             } else if (muqueMan.getVidaFinal() < evilAlien.getVidaFinal()) {
-                System.out.println("O vencedor e Alien");
+                System.out.println();
+                System.out.println("O vencedor é Alien");
             } else {
-                System.out.println("empate");
+                System.out.println();
+                System.out.println("Empate");
             }
         }
     }

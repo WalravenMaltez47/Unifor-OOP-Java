@@ -28,13 +28,12 @@ public class Main {
             String golpe;
 
             switch (escolhaDoPersonagem) {
-                // Muque-Man
                 case 1:
                     for (Round = 1; Round <= 6; Round++) {
 
+                        // Muque-Man
                         System.out.println("Vez do Muque-Man.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
-
                         if (dado == 1 || dado == 2) {
                             System.out.println("'E' para 'Chute'");
                             golpe = prompt.next();
@@ -66,6 +65,7 @@ public class Main {
                             }
                         }
 
+                        // Alien
                         System.out.println("Vez do Alien.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
                         if (dado == 1 || dado == 2) {
@@ -86,12 +86,11 @@ public class Main {
 
                     } break;
 
-                // Raio-Laser
                 case 2:
                     for (Round = 1; Round <= 6; Round++) {
 
+                        // Raio-Laser
                         int multiplicadorDeDano = (3*Round);
-
                         System.out.println("Vez do Muque-Man.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
 
@@ -129,6 +128,7 @@ public class Main {
 
                         }
 
+                        // Alien
                         System.out.println("Vez do Alien.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
                         if (dado == 1 || dado == 2) {
@@ -148,13 +148,12 @@ public class Main {
 
                     } break;
 
-                // Relampago
                 case 3:
                     for (Round = 1; Round <= 6; Round++) {
 
+                        // Relampago
                         System.out.println("Vez do Muque-Man.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
-
                         if (dado == 1 || dado == 2) {
                             System.out.println("'E' para 'Lightning Attack'");
                             golpe = prompt.next();
@@ -188,6 +187,7 @@ public class Main {
                             }
                         }
 
+                        // Alien
                         System.out.println("Vez do Alien.. Jogando os dados..");
                         dado = prompt.nextInt(); // sera trocado por random
                         if (dado == 1 || dado == 2) {
@@ -205,7 +205,6 @@ public class Main {
                         System.out.println("abilidade especial do Relampago adiciona +3 de dano ao alien, agora Alien esta com "+evilAlien.dano(3)+ " hp ");
 
                     } break;
-
             }
 
             // DETERMINAR QUEM VENCEU:

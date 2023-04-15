@@ -1,5 +1,5 @@
 interface InterfaceDoJogo {
-   int dano(int dano);
+   int damage(int dano);
    int healing(int hp);
-   int getVidaFinal();
+   int getFinalHp();
 }

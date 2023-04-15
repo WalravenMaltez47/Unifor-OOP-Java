@@ -44,7 +44,6 @@ public class Main {
                             System.out.println("Vez do Muque-Man...Jogando os dados...");
                             dado = prompt.nextInt(); // sera trocado por random
 
-
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Chute'");
                                 golpe = prompt.next();
@@ -109,8 +108,8 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + "HP");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + "HP");
+                        System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
 
                         // Resultado
                         if (muqueMan.getFinalHp() > evilAlien.getFinalHp()) {

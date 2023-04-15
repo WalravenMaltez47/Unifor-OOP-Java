@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner prompt = new Scanner(System.in);
+        RandomMethod random = new RandomMethod();
 
         // setting a vida (hp)
         int hpDoHero = 200;
@@ -43,12 +44,11 @@ public class Main {
 
                     // EASY MODE
                     if (dificuldade.equals("EASY")||dificuldade.equals("easy")) {
-                        if (hpDoHero<0) {return;}
-                        else {
+                        // if (hpDoHero<0) {return;} else {}
 
                             for (Round = 1; Round <= 6; Round++) {
-                                System.out.println("Vez do Muque-Man...Jogando os dados...");
-                                dado = prompt.nextInt(); // sera trocado por random
+                                dado = random.gerarNumeroAleatorio();
+                                System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
 
                                 if (dado == 1 || dado == 2) {
                                     System.out.println("'E' para 'Chute'");
@@ -99,8 +99,8 @@ public class Main {
                                 System.out.println(); // Backspace
 
                                 // Alien
-                                System.out.println("Vez do Alien...Jogando os dados...");
-                                dado = prompt.nextInt(); // sera trocado por random
+                                dado = random.gerarNumeroAleatorio();
+                                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                                 // Golpes
                                 if (dado == 1 || dado == 2) {
@@ -133,15 +133,13 @@ public class Main {
                             else {
                                 System.out.println("Empate!...pelo menos você não perdeu... HAHAHA!");
                             }
-                        }
                     }
 
                     // STANDARD MODE
                     if (dificuldade.equals("STANDARD") || dificuldade.equals("standard")) {
                         for (Round = 1; Round <= 6; Round++) {
-                            System.out.println("Vez do Muque-Man...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
-
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
 
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Chute'");
@@ -192,8 +190,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -232,8 +230,9 @@ public class Main {
                     // HARD MODE
                     if (dificuldade.equals("HARD") || dificuldade.equals("hard")) {
                         for (Round = 1; Round <= 6; Round++) {
-                            System.out.println("Vez do Muque-Man...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
+
 
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Chute'");
@@ -284,8 +283,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -327,8 +326,8 @@ public class Main {
                     if (dificuldade.equals("EASY")||dificuldade.equals("easy")) {
                         for (Round = 1; Round <= 6; Round++) {
                             int multiplicadorDeDano = (3*Round);
-                            System.out.println("Vez do Raio-Laser...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -380,8 +379,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -421,8 +420,8 @@ public class Main {
                     if (dificuldade.equals("STANDARD")||dificuldade.equals("standard")) {
                         for (Round = 1; Round <= 6; Round++) {
                             int multiplicadorDeDano = (3*Round);
-                            System.out.println("Vez do Raio-Laser...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Raio-Laser...Jogando os dados...deu  " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -474,8 +473,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -514,8 +513,8 @@ public class Main {
                     if (dificuldade.equals("HARD")||dificuldade.equals("hard")) {
                         for (Round = 1; Round <= 6; Round++) {
                             int multiplicadorDeDano = (3*Round);
-                            System.out.println("Vez do Raio-Laser...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -567,8 +566,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -609,8 +608,8 @@ public class Main {
                     // EASY MODE
                     if (dificuldade.equals("EASY")||dificuldade.equals("easy")) {
                         for (Round = 1; Round <= 6; Round++) {
-                            System.out.println("Vez do Relampago...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -662,8 +661,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -701,8 +700,8 @@ public class Main {
                     // STANDARD MODE
                     if (dificuldade.equals("STANDARD")||dificuldade.equals("standard")) {
                         for (Round = 1; Round <= 6; Round++) {
-                            System.out.println("Vez do Relampago...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -754,8 +753,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -793,8 +792,8 @@ public class Main {
                     // HARD MODE
                     if (dificuldade.equals("HARD")||dificuldade.equals("hard")) {
                         for (Round = 1; Round <= 6; Round++) {
-                            System.out.println("Vez do Relampago...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {
@@ -846,8 +845,8 @@ public class Main {
                             System.out.println(); // Backspace
 
                             // Alien
-                            System.out.println("Vez do Alien...Jogando os dados...");
-                            dado = prompt.nextInt(); // sera trocado por random
+                            dado = random.gerarNumeroAleatorio();
+                            System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
                             // Golpes
                             if (dado == 1 || dado == 2) {

@@ -11,8 +11,7 @@ public class Main {
         MuqueMan muqueMan = new MuqueMan(hpDoHero);
         RaioLaser raioLaser = new RaioLaser(hpDoHero);
         Relampago relampago = new Relampago(hpDoHero);
-        EvilAlien evilAlien = new EvilAlien(hpDoAlien);
-
+        EvilAlien alien = new EvilAlien(hpDoAlien);
 
         // Escolha do personagem
         System.out.println("Escolha seu personagem: ");
@@ -55,7 +54,7 @@ public class Main {
                                     golpe = prompt.next();
                                     if (golpe.equals("e") || golpe.equals("E")) {
                                         System.out.println("'Chute' Attack!");
-                                        System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + evilAlien.damage(10) + " HP ");
+                                        System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + alien.damage(10) + " HP ");
                                     }
 
                                     // Punição
@@ -69,7 +68,7 @@ public class Main {
                                     golpe = prompt.next();
                                     if (golpe.equals("q") || golpe.equals("Q")) {
                                         System.out.println("'Tornado' Attack!");
-                                        System.out.println("Alien sofreu +20 de dano de Muque-Man e agora está com " + evilAlien.damage(20) + " HP ");
+                                        System.out.println("Alien sofreu +20 de dano de Muque-Man e agora está com " + alien.damage(20) + " HP ");
                                     }
 
                                     // Punição
@@ -83,7 +82,7 @@ public class Main {
                                     golpe = prompt.next();
                                     if (golpe.equals("z") || golpe.equals("Z")) {
                                         System.out.println("'Berserker' Attack!");
-                                        System.out.println("Alien sofreu +40 de dano de Muque-Man e agora está com " + evilAlien.damage(40) + " HP ");
+                                        System.out.println("Alien sofreu +40 de dano de Muque-Man e agora está com " + alien.damage(40) + " HP ");
                                     }
 
                                     // Punição
@@ -119,14 +118,14 @@ public class Main {
 
                             // Placar
                             System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + " HP ");
-                            System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                            System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                             // Resultado
-                            if (muqueMan.getFinalHp() > evilAlien.getFinalHp()) {
+                            if (muqueMan.getFinalHp() > alien.getFinalHp()) {
                                 System.out.println();
                                 System.out.println("O vencedor é Muqueman!");
                             }
-                            else if (muqueMan.getFinalHp() < evilAlien.getFinalHp()) {
+                            else if (muqueMan.getFinalHp() < alien.getFinalHp()) {
                                 System.out.println();
                                 System.out.println("O vencedor é Alien!");
                             }
@@ -146,7 +145,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e") || golpe.equals("E")) {
                                     System.out.println("'Chute' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -160,7 +159,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q") || golpe.equals("Q")) {
                                     System.out.println("'Tornado' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Muque-Man e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Muque-Man e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -174,7 +173,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z") || golpe.equals("Z")) {
                                     System.out.println("'Berserker' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Muque-Man e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Muque-Man e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -210,14 +209,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (muqueMan.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (muqueMan.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Muqueman!");
                         }
-                        else if (muqueMan.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (muqueMan.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien!");
                         }
@@ -239,7 +238,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e") || golpe.equals("E")) {
                                     System.out.println("'Chute' Attack!");
-                                    System.out.println("Alien sofreu +5 de dano de Muque-Man e agora está com " + evilAlien.damage(5) + " HP ");
+                                    System.out.println("Alien sofreu +5 de dano de Muque-Man e agora está com " + alien.damage(5) + " HP ");
                                 }
 
                                 // Punição
@@ -253,7 +252,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q") || golpe.equals("Q")) {
                                     System.out.println("'Tornado' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -267,7 +266,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z") || golpe.equals("Z")) {
                                     System.out.println("'Berserker' Attack!");
-                                    System.out.println("Alien sofreu +30 de dano de Muque-Man e agora está com " + evilAlien.damage(30) + " HP ");
+                                    System.out.println("Alien sofreu +30 de dano de Muque-Man e agora está com " + alien.damage(30) + " HP ");
                                 }
 
                                 // Punição
@@ -303,14 +302,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + "hpDoHero");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + "hpDoHero");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + "hpDoHero");
 
                         // Resultado
-                        if (muqueMan.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (muqueMan.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Muqueman!");
                         }
-                        else if (muqueMan.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (muqueMan.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien!");
                         }
@@ -335,7 +334,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e") || golpe.equals("E")) {
                                     System.out.println("'Optic Blast' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora está com " + evilAlien.damage(10) + " HPo ");
+                                    System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora está com " + alien.damage(10) + " HPo ");
                                 }
 
                                 // Punição
@@ -349,7 +348,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q")||golpe.equals("Q")) {
                                     System.out.println("'Mega Optic' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -363,7 +362,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z")||golpe.equals("Z")) {
                                     System.out.println("'Super Optic' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -374,7 +373,7 @@ public class Main {
                             }
 
                             // special ability
-                            System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien está com " + evilAlien.damage(multiplicadorDeDano) + " HP ");
+                            System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien está com " + alien.damage(multiplicadorDeDano) + " HP ");
 
                             System.out.println(); // Backspace
 
@@ -399,14 +398,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Raio-Laser " + raioLaser.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (raioLaser.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (raioLaser.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Raio-Laser");
                         }
-                        else if (raioLaser.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (raioLaser.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -429,7 +428,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e") || golpe.equals("E")) {
                                     System.out.println("'Optic Blast' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -443,7 +442,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q")||golpe.equals("Q")) {
                                     System.out.println("'Mega Optic' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -457,7 +456,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z")||golpe.equals("Z")) {
                                     System.out.println("'Super Optic' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -468,7 +467,7 @@ public class Main {
                             }
 
                             // special ability
-                            System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien está com " + evilAlien.damage(multiplicadorDeDano) + " HP ");
+                            System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien está com " + alien.damage(multiplicadorDeDano) + " HP ");
 
                             System.out.println(); // Backspace
 
@@ -493,14 +492,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Raio-Laser " + raioLaser.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (raioLaser.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (raioLaser.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Raio-Laser");
                         }
-                        else if (raioLaser.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (raioLaser.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -522,7 +521,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e") || golpe.equals("E")) {
                                     System.out.println("'Optic Blast' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Raio-Laser e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -536,7 +535,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q")||golpe.equals("Q")) {
                                     System.out.println("'Mega Optic' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Raio-Laser e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -550,7 +549,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z")||golpe.equals("Z")) {
                                     System.out.println("'Super Optic' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Raio-Laser e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -561,7 +560,7 @@ public class Main {
                             }
 
                             // special ability
-                            System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien está com " + evilAlien.damage(multiplicadorDeDano) + " HP ");
+                            System.out.println("abilidade especial do Raio-Laser aumenta em +3 o seu dano por rodada, agora Alien está com " + alien.damage(multiplicadorDeDano) + " HP ");
 
                             System.out.println(); // Backspace
 
@@ -586,14 +585,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Raio-Laser " + raioLaser.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (raioLaser.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (raioLaser.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Raio-Laser");
                         }
-                        else if (raioLaser.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (raioLaser.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -617,7 +616,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e")||golpe.equals("E")) {
                                     System.out.println("'Lightnig Attack' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Relampago e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Relampago e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -631,7 +630,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q")||golpe.equals("Q")) {
                                     System.out.println("'Lightning Storm' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Relampago e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Relampago e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -645,7 +644,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z")||golpe.equals("Z")) {
                                     System.out.println("'Hail Storm' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Relâmpago e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Relâmpago e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -656,7 +655,7 @@ public class Main {
                             }
 
                             // special ability
-                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + evilAlien.damage(3) + " HP ");
+                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.damage(3) + " HP ");
 
                             System.out.println(); // Backspace
 
@@ -681,14 +680,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Relâmpago " + relampago.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (relampago.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (relampago.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Relâmpago");
                         }
-                        else if (relampago.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (relampago.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -709,7 +708,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e")||golpe.equals("E")) {
                                     System.out.println("'Lightnig Attack' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Relampago e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Relampago e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -723,7 +722,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q")||golpe.equals("Q")) {
                                     System.out.println("'Lightning Storm' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Relampago e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Relampago e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -737,7 +736,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z")||golpe.equals("Z")) {
                                     System.out.println("'Hail Storm' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Relâmpago e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Relâmpago e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -748,7 +747,7 @@ public class Main {
                             }
 
                             // special ability
-                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + evilAlien.damage(3) + " HP ");
+                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.damage(3) + " HP ");
 
                             System.out.println(); // Backspace
 
@@ -773,14 +772,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Relâmpago " + relampago.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (relampago.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (relampago.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Relâmpago");
                         }
-                        else if (relampago.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (relampago.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -801,7 +800,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("e")||golpe.equals("E")) {
                                     System.out.println("'Lightnig Attack' Attack!");
-                                    System.out.println("Alien sofreu +10 de dano de Relampago e agora está com " + evilAlien.damage(10) + " HP ");
+                                    System.out.println("Alien sofreu +10 de dano de Relampago e agora está com " + alien.damage(10) + " HP ");
                                 }
 
                                 // Punição
@@ -815,7 +814,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("q")||golpe.equals("Q")) {
                                     System.out.println("'Lightning Storm' Attack!");
-                                    System.out.println("Alien sofreu +20 de dano de Relampago e agora está com " + evilAlien.damage(20) + " HP ");
+                                    System.out.println("Alien sofreu +20 de dano de Relampago e agora está com " + alien.damage(20) + " HP ");
                                 }
 
                                 // Punição
@@ -829,7 +828,7 @@ public class Main {
                                 golpe = prompt.next();
                                 if (golpe.equals("z")||golpe.equals("Z")) {
                                     System.out.println("'Hail Storm' Attack!");
-                                    System.out.println("Alien sofreu +40 de dano de Relâmpago e agora está com " + evilAlien.damage(40) + " HP ");
+                                    System.out.println("Alien sofreu +40 de dano de Relâmpago e agora está com " + alien.damage(40) + " HP ");
                                 }
 
                                 // Punição
@@ -840,7 +839,7 @@ public class Main {
                             }
 
                             // special ability
-                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + evilAlien.damage(3) + " HP ");
+                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.damage(3) + " HP ");
 
                             System.out.println(); // Backspace
 
@@ -865,14 +864,14 @@ public class Main {
 
                         // Placar
                         System.out.println("A vida final de Relâmpago " + relampago.getFinalHp() + " HP ");
-                        System.out.println("A vida final de Alien " + evilAlien.getFinalHp() + " HP ");
+                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " HP ");
 
                         // Resultado
-                        if (relampago.getFinalHp() > evilAlien.getFinalHp()) {
+                        if (relampago.getFinalHp() > alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Relâmpago");
                         }
-                        else if (relampago.getFinalHp() < evilAlien.getFinalHp()) {
+                        else if (relampago.getFinalHp() < alien.getFinalHp()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }

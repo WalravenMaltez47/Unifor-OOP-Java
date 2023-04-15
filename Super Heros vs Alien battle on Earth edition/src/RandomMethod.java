@@ -5,7 +5,6 @@ public class RandomMethod {
         return random.nextInt(6) + 1;
     }
 
-
    /* // Uma outra forma de fazer caso queira escolher os valores de cada face do dado e seu tamanho.
 
    int[] numeros = {1,2,3,4,5,6};

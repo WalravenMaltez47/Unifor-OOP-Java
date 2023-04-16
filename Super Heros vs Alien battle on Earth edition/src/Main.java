@@ -32,7 +32,6 @@ public class Main {
         String start = prompt.next();
 
         if (start.equals("start") || start.equals("START")) {
-
             int dado;
             int Round;
             String golpe;
@@ -56,7 +55,6 @@ public class Main {
                                         System.out.println("'Chute' Attack!");
                                         System.out.println("Alien sofreu +10 de dano de Muque-Man e agora está com " + alien.damage(10) + " HP ");
                                     }
-
                                     // Punição
                                     else {
                                         System.out.println("Punição!");

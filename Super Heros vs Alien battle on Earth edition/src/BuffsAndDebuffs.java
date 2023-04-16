@@ -2,11 +2,19 @@ public abstract class BuffsAndDebuffs implements InterfaceDoJogo {
     int vida;
     @Override
     public int damage(int dano) {
-        return this.vida = this.vida - dano;
+         this.vida = this.vida - dano;
+        if (this.vida>=0){
+            return this.vida;
+        }
+        return 0;
     }
     @Override
     public int healing(int hp) {
-        return this.vida = this.vida + hp;
+        this.vida = this.vida + hp;
+        if (this.vida<0) {
+            return 0;
+        }
+        else {return this.vida;}
     }
     @Override
     public int getFinalHp() {

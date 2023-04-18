@@ -1,5 +1,6 @@
-public class MuqueMan extends BuffsAndDebuffs {
+public class MuqueMan extends Start  {
     MuqueMan(int vida) {
         this.vida=vida;
     }
+
 }

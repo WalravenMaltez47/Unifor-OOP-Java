@@ -1,4 +1,4 @@
-public class EvilAlien extends BuffsAndDebuffs {
+public class EvilAlien extends Start {
     EvilAlien(int vida) {
         this.vida = vida;
     }

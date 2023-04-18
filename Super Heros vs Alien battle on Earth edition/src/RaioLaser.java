@@ -1,4 +1,3 @@
-public class RaioLaser extends BuffsAndDebuffs {
+public class RaioLaser extends Start {
     RaioLaser(int vida) {this.vida = vida;}
-
 }

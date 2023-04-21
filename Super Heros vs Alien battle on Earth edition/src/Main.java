@@ -99,7 +99,7 @@ public class Main {
                     // EASY MODE
                     if (dificuldade.equalsIgnoreCase("EASY")) {
 
-                            for (Round = 1; Round <= 6 && muqueMan.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                            for (Round = 1; Round <= 6 && muqueMan.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
                                 dado = random.gerarNumeroAleatorio();
                                 System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
 
@@ -175,21 +175,21 @@ public class Main {
                                 System.out.println();
 
                                 // SPECIAL SKILL
-                                if (muqueMan.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                if (muqueMan.getVidaFinal()>0&&alien.getVidaFinal()>0) {
                                     System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healingSkill(5) + " hp ");
                                 }
                             }
 
                             // Placar
-                            System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + " hp ");
-                            System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                            System.out.println("A vida final de Muque-Man " + muqueMan.getVidaFinal() + " hp ");
+                            System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                             // Resultado
-                            if (muqueMan.getFinalHp() > alien.getFinalHp()) {
+                            if (muqueMan.getVidaFinal() > alien.getVidaFinal()) {
                                 System.out.println();
                                 System.out.println("O vencedor é Muqueman!");
                             }
-                            else if (muqueMan.getFinalHp() < alien.getFinalHp()) {
+                            else if (muqueMan.getVidaFinal() < alien.getVidaFinal()) {
                                 System.out.println();
                                 System.out.println("O vencedor é Alien!");
                             }
@@ -200,7 +200,7 @@ public class Main {
 
                     // STANDARD MODE
                     if (dificuldade.equalsIgnoreCase("STANDARD")) {
-                        for (Round = 1; Round <= 6 && muqueMan.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 1; Round <= 6 && muqueMan.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
 
@@ -274,21 +274,21 @@ public class Main {
                             }
 
                             // SPECIAL SKILL
-                            if (muqueMan.getFinalHp()>0&&alien.getFinalHp()>0) {
+                            if (muqueMan.getVidaFinal()>0&&alien.getVidaFinal()>0) {
                                 System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healingSkill(5) + " hp ");
                             }
                         }
 
                         // Placar
-                        System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Muque-Man " + muqueMan.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (muqueMan.getFinalHp() > alien.getFinalHp()) {
+                        if (muqueMan.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Muqueman!");
                         }
-                        else if (muqueMan.getFinalHp() < alien.getFinalHp()) {
+                        else if (muqueMan.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien!");
                         }
@@ -301,7 +301,7 @@ public class Main {
                     // HARD MODE
                     if (dificuldade.equalsIgnoreCase("HARD")) {
 
-                        for (Round = 1; Round <= 6 && muqueMan.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 1; Round <= 6 && muqueMan.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
 
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
@@ -377,21 +377,21 @@ public class Main {
                             }
 
                             // SPECIAL SKILL
-                            if (muqueMan.getFinalHp()>0&&alien.getFinalHp()>0) {
+                            if (muqueMan.getVidaFinal()>0&&alien.getVidaFinal()>0) {
                                 System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healingSkill(5) + " hp ");
                             }
                         }
 
                         // Placar
-                        System.out.println("A vida final de Muque-Man " + muqueMan.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Muque-Man " + muqueMan.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (muqueMan.getFinalHp() > alien.getFinalHp()) {
+                        if (muqueMan.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Muqueman!");
                         }
-                        else if (muqueMan.getFinalHp() < alien.getFinalHp()) {
+                        else if (muqueMan.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien!");
                         }
@@ -406,7 +406,7 @@ public class Main {
 
                     // EASY MODE
                     if (dificuldade.equalsIgnoreCase("EASY")) {
-                        for (Round = 0; Round < 6 && raioLaser.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 0; Round < 6 && raioLaser.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
 
@@ -420,7 +420,7 @@ public class Main {
                                     }
 
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -447,7 +447,7 @@ public class Main {
                                     }
 
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -474,7 +474,7 @@ public class Main {
                                     }
 
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -517,15 +517,15 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Raio-Laser " + raioLaser.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Raio-Laser " + raioLaser.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (raioLaser.getFinalHp() > alien.getFinalHp()) {
+                        if (raioLaser.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Raio-Laser");
                         }
-                        else if (raioLaser.getFinalHp() < alien.getFinalHp()) {
+                        else if (raioLaser.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -537,7 +537,7 @@ public class Main {
 
                     // STANDARD MODE
                     if (dificuldade.equalsIgnoreCase("STANDARD")) {
-                        for (Round = 0; Round < 6 && raioLaser.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 0; Round < 6 && raioLaser.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
 
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Raio-Laser...Jogando os dados...deu  " + dado);
@@ -553,7 +553,7 @@ public class Main {
                                     }
 
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -580,7 +580,7 @@ public class Main {
                                     }
 
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -607,7 +607,7 @@ public class Main {
                                     }
 
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -650,15 +650,15 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Raio-Laser " + raioLaser.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Raio-Laser " + raioLaser.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (raioLaser.getFinalHp() > alien.getFinalHp()) {
+                        if (raioLaser.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Raio-Laser");
                         }
-                        else if (raioLaser.getFinalHp() < alien.getFinalHp()) {
+                        else if (raioLaser.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -669,7 +669,7 @@ public class Main {
 
                     // HARD MODE
                     if (dificuldade.equalsIgnoreCase("HARD")) {
-                        for (Round = 0; Round < 6 && raioLaser.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 0; Round < 6 && raioLaser.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
 
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
@@ -685,7 +685,7 @@ public class Main {
                                         raioLaser.setDano(10);
                                     }
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -711,7 +711,7 @@ public class Main {
                                         raioLaser.setDano(20);
                                     }
                                     else {
-                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                        if (raioLaser.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                             // SPECIAL SKILL
                                             int multiplicador_De_Dano = 3*Round;
@@ -779,15 +779,15 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Raio-Laser " + raioLaser.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Raio-Laser " + raioLaser.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (raioLaser.getFinalHp() > alien.getFinalHp()) {
+                        if (raioLaser.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Raio-Laser");
                         }
-                        else if (raioLaser.getFinalHp() < alien.getFinalHp()) {
+                        else if (raioLaser.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -801,7 +801,7 @@ public class Main {
 
                     // EASY MODE
                     if (dificuldade.equalsIgnoreCase("EASY")) {
-                        for (Round = 1; Round <= 6 && relampago.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 1; Round <= 6 && relampago.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
 
@@ -875,7 +875,7 @@ public class Main {
                                 System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
 
-                            if (relampago.getFinalHp()>0&&alien.getFinalHp()>0) {
+                            if (relampago.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                 // SPECIAL SKILL
                                 System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, " +
@@ -885,15 +885,15 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Relâmpago " + relampago.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Relâmpago " + relampago.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (relampago.getFinalHp() > alien.getFinalHp()) {
+                        if (relampago.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Relâmpago");
                         }
-                        else if (relampago.getFinalHp() < alien.getFinalHp()) {
+                        else if (relampago.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -904,7 +904,7 @@ public class Main {
 
                     // STANDARD MODE
                     if (dificuldade.equalsIgnoreCase("STANDARD")) {
-                        for (Round = 1; Round <= 6  && relampago.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 1; Round <= 6  && relampago.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
 
@@ -978,7 +978,7 @@ public class Main {
                                 System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
 
-                            if (relampago.getFinalHp()>0&&alien.getFinalHp()>0) {
+                            if (relampago.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                 // SPECIAL SKILL
                                 System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
@@ -987,15 +987,15 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Relâmpago " + relampago.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Relâmpago " + relampago.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (relampago.getFinalHp() > alien.getFinalHp()) {
+                        if (relampago.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Relâmpago");
                         }
-                        else if (relampago.getFinalHp() < alien.getFinalHp()) {
+                        else if (relampago.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }
@@ -1006,7 +1006,7 @@ public class Main {
 
                     // HARD MODE
                     if (dificuldade.equalsIgnoreCase("HARD")) {
-                        for (Round = 1; Round <= 6  && relampago.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
+                        for (Round = 1; Round <= 6  && relampago.getVidaFinal()>0 && alien.getVidaFinal()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
 
@@ -1080,7 +1080,7 @@ public class Main {
                                 System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
 
-                            if (relampago.getFinalHp()>0&&alien.getFinalHp()>0) {
+                            if (relampago.getVidaFinal()>0&&alien.getVidaFinal()>0) {
 
                                 // SPECIAL SKILL
                                 System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
@@ -1088,15 +1088,15 @@ public class Main {
                         }
 
                         // Placar
-                        System.out.println("A vida final de Relâmpago " + relampago.getFinalHp() + " hp ");
-                        System.out.println("A vida final de Alien " + alien.getFinalHp() + " hp ");
+                        System.out.println("A vida final de Relâmpago " + relampago.getVidaFinal() + " hp ");
+                        System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
                         // Resultado
-                        if (relampago.getFinalHp() > alien.getFinalHp()) {
+                        if (relampago.getVidaFinal() > alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Relâmpago");
                         }
-                        else if (relampago.getFinalHp() < alien.getFinalHp()) {
+                        else if (relampago.getVidaFinal() < alien.getVidaFinal()) {
                             System.out.println();
                             System.out.println("O vencedor é Alien");
                         }

@@ -1,6 +1,5 @@
-public class MuqueMan extends Start  {
+public class MuqueMan extends Personagem {
     MuqueMan(int vida) {
         this.vida=vida;
     }
-
 }

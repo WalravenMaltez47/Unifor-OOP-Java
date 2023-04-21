@@ -10,7 +10,6 @@ public class Main {
     static RaioLaser raioLaser = new RaioLaser(hpDoHero);
     static Relampago relampago = new Relampago(hpDoHero);
     static EvilAlien alien = new EvilAlien(hpDoAlien);
-    static Start startMain = new Start();
     static Scanner prompt = new Scanner(System.in);
     static RandomMethod random = new RandomMethod();
 
@@ -20,16 +19,16 @@ public class Main {
         String start = prompt.next();
 
         try {
-            startMain.setStart(start);
+            new Start(start);
         } catch (StartException e) {
             System.out.println("Failed! Try again");
             System.out.println();
 
             perguntaStart();
         }
+
         return true;
     }
-
     public static void main(String[] args) {
 
         // Escolha da dificuldade
@@ -62,7 +61,6 @@ public class Main {
             dificuldade = prompt.next();
        }
 
-
         // Escolha do personagem
         System.out.println("Escolha seu personagem: ");
         System.out.println("1 - Muque-Man");
@@ -87,7 +85,6 @@ public class Main {
             escolhaDoPersonagem = prompt.next();
          }
 
-
         if (perguntaStart()) {
 
             int dado;
@@ -100,7 +97,7 @@ public class Main {
                 case "1":
 
                     // EASY MODE
-                    if (dificuldade.equals("EASY")||dificuldade.equals("easy")) {
+                    if (dificuldade.equalsIgnoreCase("EASY")) {
 
                             for (Round = 1; Round <= 6 && muqueMan.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
                                 dado = random.gerarNumeroAleatorio();
@@ -109,7 +106,7 @@ public class Main {
                                 if (dado == 1 || dado == 2) {
                                     System.out.println("'E' para 'Chute'");
                                     golpe = prompt.next();
-                                    if (golpe.equals("e") || golpe.equals("E")) {
+                                    if (golpe.equalsIgnoreCase("E")) {
                                         muqueMan.setDano(10);
                                         System.out.println("'Chute' Attack!"  + " +"+ muqueMan.getDano() + " melee demage ");
                                         System.out.println("alien esta com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -124,7 +121,7 @@ public class Main {
                                 else if (dado >= 3 && dado <= 5) {
                                     System.out.println("'Q' para 'Tornado'");
                                     golpe = prompt.next();
-                                    if (golpe.equals("q") || golpe.equals("Q")) {
+                                    if (golpe.equalsIgnoreCase("Q")) {
                                         muqueMan.setDano(20);
                                         System.out.println("'Tornado' Attack!'"  + " +"+ muqueMan.getDano() + " melee demage ");
                                         System.out.println("alien esta com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -139,7 +136,7 @@ public class Main {
                                 else if (dado == 6) {
                                     System.out.println("'Z' para 'Berserker'");
                                     golpe = prompt.next();
-                                    if (golpe.equals("z") || golpe.equals("Z")) {
+                                    if (golpe.equalsIgnoreCase("Z")) {
                                         muqueMan.setDano(40);
                                         System.out.println("'Berserker' Attack!" + " +"+muqueMan.getDano() + " melee demage ");
                                         System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -166,19 +163,21 @@ public class Main {
                                 }
                                 else if (dado >= 3 && dado <= 5) {
                                     alien.setDano(15);
-                                    System.out.println("'Bit Laser' Attack!" + " +"+alien.getDano() + " alien demag ");
+                                    System.out.println("'Bit Laser' Attack!" + " +"+alien.getDano() + " alien demage ");
                                     System.out.println("Muque-Man está com " + muqueMan.getVida(alien.getDano()) + " hp ");
                                 }
                                 else if (dado == 6) {
                                     alien.setDano(20);
-                                    System.out.println("'Shockwave' Attack!" + " +"+alien.getDano() + " alien demag ");
+                                    System.out.println("'Shockwave' Attack!" + " +"+alien.getDano() + " alien demage ");
                                     System.out.println("Muque-Man  está com " + muqueMan.getVida(alien.getDano()) + " hp ");
                                 }
 
                                 System.out.println();
 
                                 // SPECIAL SKILL
-                                System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healing(5) + " hp ");
+                                if (muqueMan.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                    System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healingSkill(5) + " hp ");
+                                }
                             }
 
                             // Placar
@@ -200,7 +199,7 @@ public class Main {
                     }
 
                     // STANDARD MODE
-                    if (dificuldade.equals("STANDARD") || dificuldade.equals("standard")) {
+                    if (dificuldade.equalsIgnoreCase("STANDARD")) {
                         for (Round = 1; Round <= 6 && muqueMan.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
@@ -208,7 +207,7 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Chute'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e") || golpe.equals("E")) {
+                                if (golpe.equalsIgnoreCase("E")) {
                                     muqueMan.setDano(10);
                                     System.out.println("'Chute' Attack!'" + " +"+muqueMan.getDano() + " melee demage ");
                                     System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -223,7 +222,7 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("'Q' para 'Tornado'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q") || golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
                                     muqueMan.setDano(20);
                                     System.out.println("'Tornado' Attack!'" + " +"+muqueMan.getDano() + " melee demage ");
                                     System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -238,7 +237,7 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Berserker'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z") || golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
                                     muqueMan.setDano(40);
                                     System.out.println("'Berserker' Attack!'" + " +"+muqueMan.getDano() + " melee demage ");
                                     System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -275,7 +274,9 @@ public class Main {
                             }
 
                             // SPECIAL SKILL
-                            System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healing(5) + " hp ");
+                            if (muqueMan.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healingSkill(5) + " hp ");
+                            }
                         }
 
                         // Placar
@@ -298,7 +299,7 @@ public class Main {
                     }
 
                     // HARD MODE
-                    if (dificuldade.equals("HARD") || dificuldade.equals("hard")) {
+                    if (dificuldade.equalsIgnoreCase("HARD")) {
 
                         for (Round = 1; Round <= 6 && muqueMan.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
 
@@ -309,7 +310,7 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Chute'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e") || golpe.equals("E")) {
+                                if (golpe.equalsIgnoreCase("E")) {
                                     muqueMan.setDano(10);
                                     System.out.println("'Chute' Attack!'" + " +"+muqueMan.getDano() + " melee demage ");
                                     System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -324,7 +325,7 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("'Q' para 'Tornado'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q") || golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
                                     muqueMan.setDano(20);
                                     System.out.println("''Tornado' Attack!'" + " +"+muqueMan.getDano() + " melee demage ");
                                     System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -339,7 +340,7 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Berserker'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z") || golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
                                     muqueMan.setDano(20);
                                     System.out.println("'Berserker' Attack!'" + " +"+muqueMan.getDano() + " melee demage ");
                                     System.out.println("Alien está com " + alien.getVida(muqueMan.getDano()) + " hp ");
@@ -376,7 +377,9 @@ public class Main {
                             }
 
                             // SPECIAL SKILL
-                            System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healing(5) + " hp ");
+                            if (muqueMan.getFinalHp()>0&&alien.getFinalHp()>0) {
+                                System.out.println("abilidade especial do Muque-Man lhe concede +5 de hp, agora ele está com " + muqueMan.healingSkill(5) + " hp ");
+                            }
                         }
 
                         // Placar
@@ -402,7 +405,7 @@ public class Main {
                 case "2":
 
                     // EASY MODE
-                    if (dificuldade.equals("EASY")||dificuldade.equals("easy")) {
+                    if (dificuldade.equalsIgnoreCase("EASY")) {
                         for (Round = 0; Round < 6 && raioLaser.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
@@ -414,17 +417,18 @@ public class Main {
                                 if (golpe.equals("e") || golpe.equals("E")) {
                                     if (Round==0) {
                                         raioLaser.setDano(10);
-                                        System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
-                                    // SPECIAL SKILL
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(10+multiplicador_De_Dano);
-                                        System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(10+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -436,20 +440,22 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("'Q' para 'Mega Optic'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q")||golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(20);
-                                        System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
-                                    // SPECIAL SKILL
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(20+multiplicador_De_Dano);
-                                        System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(20+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -461,20 +467,22 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Super Optic'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z")||golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(40);
-                                        System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
-                                    // SPECIAL SKILL
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(40*multiplicador_De_Dano);
-                                        System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(40+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -486,7 +494,7 @@ public class Main {
 
                             System.out.println(); // Backspace
 
-                            // Alien
+                            // ALIEN
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
@@ -528,7 +536,7 @@ public class Main {
                     }
 
                     // STANDARD MODE
-                    if (dificuldade.equals("STANDARD")||dificuldade.equals("standard")) {
+                    if (dificuldade.equalsIgnoreCase("STANDARD")) {
                         for (Round = 0; Round < 6 && raioLaser.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
 
                             dado = random.gerarNumeroAleatorio();
@@ -538,20 +546,22 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Optic Blast'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e") || golpe.equals("E")) {
+                                if (golpe.equalsIgnoreCase("E")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(10);
-                                        System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
-                                    // SPECIAL SKILL
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(10+multiplicador_De_Dano);
-                                        System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(10+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -563,20 +573,22 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("'Q' para 'Mega Optic'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q")||golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(20);
-                                        System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
-                                    // SPECIAL SKILL
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(20+multiplicador_De_Dano);
-                                        System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(20+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -588,19 +600,22 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Super Optic'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z")||golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(40);
-                                        System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(40*multiplicador_De_Dano);
-                                        System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(40*multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -612,7 +627,7 @@ public class Main {
 
                             System.out.println(); // Backspace
 
-                            // Alien
+                            // ALIEN
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
@@ -653,7 +668,7 @@ public class Main {
                     }
 
                     // HARD MODE
-                    if (dificuldade.equals("HARD")||dificuldade.equals("hard")) {
+                    if (dificuldade.equalsIgnoreCase("HARD")) {
                         for (Round = 0; Round < 6 && raioLaser.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
 
                             dado = random.gerarNumeroAleatorio();
@@ -663,20 +678,22 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Optic Blast'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e") || golpe.equals("E")) {
+
+                                if (golpe.equalsIgnoreCase("E")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(10);
-                                        System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
-
-                                    // SPECIAL SKILL
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(10+multiplicador_De_Dano);
-                                        System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(10+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Optic Blast' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -688,20 +705,21 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("'Q' para 'Mega Optic'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q")||golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(20);
-                                        System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
-
-                                    // SPECIAL ABELITY
                                     else {
-                                        int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(20+multiplicador_De_Dano);
-                                        System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        if (raioLaser.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                            // SPECIAL SKILL
+                                            int multiplicador_De_Dano = 3*Round;
+                                            raioLaser.setDano(20+multiplicador_De_Dano);
+                                        }
                                     }
+                                    System.out.println("'Mega Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -713,20 +731,19 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Super Optic'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z")||golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
+
                                     if (Round==0) {
                                         raioLaser.setDano(40);
-                                        System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                     }
 
                                     // SPECIAL SKILL
                                     else {
                                         int multiplicador_De_Dano = 3*Round;
-                                        raioLaser.setDano(40*multiplicador_De_Dano);
-                                        System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
-                                        System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
+                                        raioLaser.setDano(40+multiplicador_De_Dano);
                                     }
+                                    System.out.println("'Super Optic' Attack!" + " +"+raioLaser.getDano() + " range demage ");
+                                    System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                                 }
 
                                 // Punição
@@ -738,7 +755,7 @@ public class Main {
 
                             System.out.println(); // Backspace
 
-                            // Alien
+                            // ALIEN
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
@@ -783,7 +800,7 @@ public class Main {
                 case "3": // Relâmpago
 
                     // EASY MODE
-                    if (dificuldade.equals("EASY")||dificuldade.equals("easy")) {
+                    if (dificuldade.equalsIgnoreCase("EASY")) {
                         for (Round = 1; Round <= 6 && relampago.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
@@ -792,7 +809,7 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Lightning Attack'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e")||golpe.equals("E")) {
+                                if (golpe.equalsIgnoreCase("E")) {
                                     relampago.setDano(10);
                                     System.out.println("'Lightnig Attack' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -822,7 +839,7 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Hail Storm'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z")||golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
                                     relampago.setDano(40);
                                     System.out.println("'Hail Storm' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -845,21 +862,26 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 alien.setDano(10);
                                 System.out.println("'Split Kick' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
                             else if (dado >= 3 && dado <= 5) {
                                 alien.setDano(15);
                                 System.out.println("'Bit Laser' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
                             else if (dado == 6) {
                                 alien.setDano(30);
                                 System.out.println("'Shockwave' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
 
-                            // SPECIAL SKILL
-                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
+                            if (relampago.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                // SPECIAL SKILL
+                                System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, " +
+                                        "agora Alien está com " + alien.getVida(3) + " hp ");
+                            }
+
                         }
 
                         // Placar
@@ -881,7 +903,7 @@ public class Main {
                     }
 
                     // STANDARD MODE
-                    if (dificuldade.equals("STANDARD")||dificuldade.equals("standard")) {
+                    if (dificuldade.equalsIgnoreCase("STANDARD")) {
                         for (Round = 1; Round <= 6  && relampago.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
@@ -890,7 +912,7 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Lightning Attack'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e")||golpe.equals("E")) {
+                                if (golpe.equalsIgnoreCase("E")) {
                                     relampago.setDano(10);
                                     System.out.println("'Lightnig Attack' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -905,7 +927,7 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("Q para 'Lightning Storm'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q")||golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
                                     relampago.setDano(20);
                                     System.out.println("'Lightning Storm' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -920,7 +942,7 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Hail Storm'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z")||golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
                                     relampago.setDano(40);
                                     System.out.println("'Hail Storm' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -935,7 +957,7 @@ public class Main {
 
                             System.out.println(); // Backspace
 
-                            // Alien
+                            // ALIEN
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
@@ -943,21 +965,25 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 alien.setDano(10);
                                 System.out.println("'Split Kick' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
                             else if (dado >= 3 && dado <= 5) {
                                 alien.setDano(20);
                                 System.out.println("'Bit Laser' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
                             else if (dado == 6) {
                                 alien.setDano(40);
                                 System.out.println("'Shockwave' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
 
-                            // SPECIAL SKILL
-                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
+                            if (relampago.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                // SPECIAL SKILL
+                                System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
+                            }
+
                         }
 
                         // Placar
@@ -979,7 +1005,7 @@ public class Main {
                     }
 
                     // HARD MODE
-                    if (dificuldade.equals("HARD")||dificuldade.equals("hard")) {
+                    if (dificuldade.equalsIgnoreCase("HARD")) {
                         for (Round = 1; Round <= 6  && relampago.getFinalHp()>0 && alien.getFinalHp()>0; Round++) {
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
@@ -988,7 +1014,7 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 System.out.println("'E' para 'Lightning Attack'");
                                 golpe = prompt.next();
-                                if (golpe.equals("e")||golpe.equals("E")) {
+                                if (golpe.equalsIgnoreCase("E")) {
                                     relampago.setDano(10);
                                     System.out.println("'Lightnig Attack' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -1003,7 +1029,7 @@ public class Main {
                             else if (dado >= 3 && dado <= 5) {
                                 System.out.println("Q para 'Lightning Storm'");
                                 golpe = prompt.next();
-                                if (golpe.equals("q")||golpe.equals("Q")) {
+                                if (golpe.equalsIgnoreCase("Q")) {
                                     relampago.setDano(20);
                                     System.out.println("'Lightning Storm' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -1018,7 +1044,7 @@ public class Main {
                             else if (dado == 6) {
                                 System.out.println("'Z' para 'Hail Storm'");
                                 golpe = prompt.next();
-                                if (golpe.equals("z")||golpe.equals("Z")) {
+                                if (golpe.equalsIgnoreCase("Z")) {
                                     relampago.setDano(40);
                                     System.out.println("'Hail Storm' Attack!" + " +"+relampago.getDano() + " magic demage ");
                                     System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
@@ -1033,7 +1059,7 @@ public class Main {
 
                             System.out.println(); // Backspace
 
-                            // Alien
+                            // ALIEN
                             dado = random.gerarNumeroAleatorio();
                             System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
 
@@ -1041,21 +1067,24 @@ public class Main {
                             if (dado == 1 || dado == 2) {
                                 alien.setDano(15);
                                 System.out.println("'Split Kick' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
                             else if (dado >= 3 && dado <= 5) {
                                 alien.setDano(30);
                                 System.out.println("'Bit Laser' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
                             else if (dado == 6) {
                                 alien.setDano(50);
                                 System.out.println("'Shockwave' Attack!" + " +"+alien.getDano() + " alien demage ");
-                                System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
+                                System.out.println("Raio-Laser está com " + relampago.getVida(alien.getDano()) + " hp ");
                             }
 
-                            // SPECIAL SKILL
-                            System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
+                            if (relampago.getFinalHp()>0&&alien.getFinalHp()>0) {
+
+                                // SPECIAL SKILL
+                                System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, agora Alien está com " + alien.getVida(3) + " hp ");
+                            }
                         }
 
                         // Placar

@@ -1,7 +1,7 @@
 interface InterfaceDoJogo {
-   void setStart(String start) throws StartException;
+   void setDano(int dano);
    int getDano();
    int getVida(int dano);
-   int healing(int hp);
+   int healingSkill(int hp);
    int getFinalHp();
 }

@@ -4,8 +4,13 @@ public class RandomMethod {
         Random random = new Random();
         return random.nextInt(6) + 1;
     }
+}
 
-   /* // Uma outra forma de fazer caso queira escolher os valores de cada face do dado e seu tamanho.
+
+/*
+   Uma outra forma de fazer caso queira
+   escolher os valores de cada face do
+    dado e seu tamanho.
 
    int[] numeros = {1,2,3,4,5,6};
     public int gerarNumeroAleatorio() {
@@ -13,5 +18,3 @@ public class RandomMethod {
         int comprimento = random.nextInt(numeros.length);
         return numeros[comprimento];
     } */
-}
-

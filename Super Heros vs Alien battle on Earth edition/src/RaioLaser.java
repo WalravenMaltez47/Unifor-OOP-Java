@@ -275,6 +275,8 @@ public class RaioLaser extends Personagem {
             }
         }
 
+        System.out.println("--------------------");
+
         // Placar
         System.out.println("A vida final de Raio-Laser " + Main.raioLaser.getVidaFinal() + " hp ");
         System.out.println("A vida final de Alien " + Main.alien.getVidaFinal() + " hp ");
@@ -291,6 +293,8 @@ public class RaioLaser extends Personagem {
         else {
             System.out.println("Empate!...pelo menos você não perdeu...HAHAHA!");
         }
+
+        System.out.println("-------------------");
     }
 }
 

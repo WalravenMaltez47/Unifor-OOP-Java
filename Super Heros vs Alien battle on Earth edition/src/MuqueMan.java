@@ -129,7 +129,7 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +6 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +6 de dano e agora está com " + Main.muqueMan.getVida(6) + " hp ");
                     }
                 } else if (dado == 6) {
                     System.out.println("'Z' para 'Berserker'");
@@ -143,7 +143,7 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +7 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +7 de dano e agora está com " + Main.muqueMan.getVida(7) + " hp ");
                     }
                 }
 
@@ -159,11 +159,11 @@ public class MuqueMan extends Personagem {
                     System.out.println("'Split Kick' Attack!'" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Muque-Man está com " + Main.muqueMan.getVida(Main.alien.getDano()) + " HP ");
                 } else if (dado >= 3 && dado <= 5) {
-                    Main.muqueMan.setDano(20);
+                    Main.alien.setDano(20);
                     System.out.println("'Bit Laser' Attack!'" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Muque-Man está com " + Main.muqueMan.getVida(Main.muqueMan.getDano()) + " hp ");
                 } else if (dado == 6) {
-                    Main.muqueMan.setDano(40);
+                    Main.alien.setDano(40);
                     System.out.println("''Shockwave' Attack!'" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Muque-Man está com " + Main.muqueMan.getVida(Main.alien.getDano()) + " hp ");
                 }
@@ -263,6 +263,8 @@ public class MuqueMan extends Personagem {
             }
         }
 
+        System.out.println("------------------");
+
         // Placar
         System.out.println("A vida final de Muque-Man " + Main.muqueMan.getVidaFinal() + " hp ");
         System.out.println("A vida final de Alien " + Main.alien.getVidaFinal() + " hp ");
@@ -279,5 +281,7 @@ public class MuqueMan extends Personagem {
         else {
             System.out.println("Empate!...pelo menos você não perdeu... HAHAHA!");
         }
+
+        System.out.println("------------------");
     }
 }

@@ -271,6 +271,8 @@ public class Relampago extends Personagem {
             }
         }
 
+        System.out.println("-----------------");
+
         // Placar
         System.out.println("A vida final de Relâmpago " + Main.relampago.getVidaFinal() + " hp ");
         System.out.println("A vida final de Alien " + Main.alien.getVidaFinal() + " hp ");
@@ -285,5 +287,7 @@ public class Relampago extends Personagem {
         } else {
             System.out.println("Empate!...pelo menos você não perdeu...HAHAHA!");
         }
+
+        System.out.println("--------------------");
     }
 }

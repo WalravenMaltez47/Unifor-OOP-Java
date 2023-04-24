@@ -115,7 +115,8 @@ public class Relampago extends Personagem {
                         System.out.println("Punição!");
                         System.out.println("Relâmpago sofre +5 de dano e agora está com " + Main.relampago.getVida(5) + " hp ");
                     }
-                } else if (dado >= 3 && dado <= 5) {
+                }
+                else if (dado >= 3 && dado <= 5) {
                     System.out.println("Q para 'Lightning Storm'");
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Q")) {
@@ -129,7 +130,8 @@ public class Relampago extends Personagem {
                         System.out.println("Punição!");
                         System.out.println("Relâmpago sofre +6 de dano e agora está com " + Main.relampago.getVida(6) + " hp ");
                     }
-                } else if (dado == 6) {
+                }
+                else if (dado == 6) {
                     System.out.println("'Z' para 'Hail Storm'");
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Z")) {
@@ -198,7 +200,8 @@ public class Relampago extends Personagem {
                         System.out.println("Punição!");
                         System.out.println("Relâmpago sofre +7 de dano e agora está com " + Main.relampago.getVida(7) + " hp ");
                     }
-                } else if (dado >= 3 && dado <= 5) {
+                }
+                else if (dado >= 3 && dado <= 5) {
                     System.out.println("Q para 'Lightning Storm'");
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Q")) {
@@ -212,7 +215,8 @@ public class Relampago extends Personagem {
                         System.out.println("Punição!");
                         System.out.println("Relâmpago sofre +10 de dano e agora está com " + Main.relampago.getVida(10) + " hp ");
                     }
-                } else if (dado == 6) {
+                }
+                else if (dado == 6) {
                     System.out.println("'Z' para 'Hail Storm'");
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Z")) {
@@ -243,11 +247,13 @@ public class Relampago extends Personagem {
                     Main.alien.setDano(15);
                     System.out.println("'Split Kick' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
-                } else if (dado >= 3 && dado <= 5) {
+                }
+                else if (dado >= 3 && dado <= 5) {
                     Main.alien.setDano(25);
                     System.out.println("'Bit Laser' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
-                } else if (dado == 6) {
+                }
+                else if (dado == 6) {
                     Main.alien.setDano(50);
                     System.out.println("'Shockwave' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");

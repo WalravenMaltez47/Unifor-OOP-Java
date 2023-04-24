@@ -1,20 +1,18 @@
 import java.util.Scanner;
 public class Main {
-    public static String dificuldade;
+    static String dificuldade;
+    static Scanner prompt = new Scanner(System.in);
+    static RandomMethod random = new RandomMethod();
 
     // Setting a vida (HP)
     static int hpDoHero = 200;
     static int hpDoAlien = 200;
-
-    // Setting objeto
     static MuqueMan muqueMan = new MuqueMan(hpDoHero);
     static RaioLaser raioLaser = new RaioLaser(hpDoHero);
     static Relampago relampago = new Relampago(hpDoHero);
     static EvilAlien alien = new EvilAlien(hpDoAlien);
-    static Scanner prompt = new Scanner(System.in);
-    static RandomMethod random = new RandomMethod();
 
-    // Start do jogo
+
     public static boolean perguntaStart() {
         System.out.println("digite 'start' para comecar");
         String start = prompt.next();

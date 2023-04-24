@@ -3,5 +3,6 @@ public class EvilAlien extends Personagem {
         this.vida = vida;
     }
     @Override
-    public void start() {}
+    public void start() {} // Em desuso
+
 }

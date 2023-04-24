@@ -2,11 +2,11 @@ public class RaioLaser extends Personagem {
     RaioLaser(int vida) {
         this.vida = vida;
     }
-
     @Override
     public void start() {
         for (Round = 0; Round < 6 && Main.raioLaser.getVidaFinal() > 0 && Main.alien.getVidaFinal() > 0; Round++) {
 
+            // EASY MODE
             if (Main.dificuldade.equalsIgnoreCase("EASY")) {
 
                 dado = Main.random.gerarNumeroAleatorio();
@@ -164,11 +164,13 @@ public class RaioLaser extends Personagem {
                     Main.alien.setDano(10);
                     System.out.println("'Split Kick' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Raio-Laser está com " + Main.raioLaser.getVida(Main.alien.getDano()) + " hp ");
-                } else if (dado >= 3 && dado <= 5) {
+                }
+                else if (dado >= 3 && dado <= 5) {
                     Main.alien.setDano(20);
                     System.out.println("'Bit Laser' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Raio-Laser está com " + Main.raioLaser.getVida(Main.alien.getDano()) + " hp ");
-                } else if (dado == 6) {
+                }
+                else if (dado == 6) {
                     Main.alien.setDano(40);
                     System.out.println("'Shockwave' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Raio-Laser está com " + Main.raioLaser.getVida(Main.alien.getDano()) + " hp ");
@@ -250,12 +252,14 @@ public class RaioLaser extends Personagem {
                     Main.alien.setDano(15);
                     System.out.println("'Split Kick' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Raio-Laser está com " + Main.raioLaser.getVida(Main.alien.getDano()) + " hp ");
-                } else if (dado >= 3 && dado <= 5) {
+                }
+                else if (dado >= 3 && dado <= 5) {
                     Main.alien.setDano(25);
                     System.out.println("'Bit Laser' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Raio-Laser está com " + Main.raioLaser.getVida(Main.alien.getDano()) + " hp ");
 
-                } else if (dado == 6) {
+                }
+                else if (dado == 6) {
                     Main.alien.setDano(50);
                     System.out.println("'Shockwave' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
                     System.out.println("Raio-Laser está com " + Main.raioLaser.getVida(Main.alien.getDano()) + " hp ");

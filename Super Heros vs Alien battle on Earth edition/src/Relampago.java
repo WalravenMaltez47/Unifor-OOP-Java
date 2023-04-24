@@ -16,7 +16,6 @@ public class Relampago extends Personagem {
                 System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
                 System.out.println();
 
-                System.out.println("--------------------");
                 // Golpes Relâmpago
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Lightning Attack'");
@@ -24,7 +23,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("E")) {
                         Main.relampago.setDano(10);
                         System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -39,7 +37,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Q")) {
                         Main.relampago.setDano(20);
                         System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -54,7 +51,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.relampago.setDano(40);
                         System.out.println("'Hail Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -64,8 +60,6 @@ public class Relampago extends Personagem {
                     }
                 }
 
-                System.out.println("-------------------");
-
                 // Alien
                 dado = Main.random.gerarNumeroAleatorio();
 
@@ -73,20 +67,16 @@ public class Relampago extends Personagem {
                 System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
                 System.out.println();
 
-                System.out.println("--------------------");
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
                     Main.alien.setDano(10);
                     System.out.println("'Split Kick' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 } else if (dado >= 3 && dado <= 5) {
                     Main.alien.setDano(15);
                     System.out.println("'Bit Laser' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 } else if (dado == 6) {
                     Main.alien.setDano(30);
                     System.out.println("'Shockwave' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 }
             }
 
@@ -99,7 +89,6 @@ public class Relampago extends Personagem {
                 System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
                 System.out.println();
 
-                System.out.println("-------------------");
                 // Golpes Relâmpago
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Lightning Attack'");
@@ -107,7 +96,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("E")) {
                         Main.relampago.setDano(10);
                         System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -122,7 +110,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Q")) {
                         Main.relampago.setDano(20);
                         System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -137,7 +124,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.relampago.setDano(40);
                         System.out.println("'Hail Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -147,8 +133,6 @@ public class Relampago extends Personagem {
                     }
                 }
 
-                System.out.println("-------------------");
-
                 // Alien
                 dado = Main.random.gerarNumeroAleatorio();
 
@@ -156,23 +140,17 @@ public class Relampago extends Personagem {
                 System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
                 System.out.println();
 
-                System.out.println("-------------------");
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
                     Main.alien.setDano(10);
                     System.out.println("'Split Kick' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 } else if (dado >= 3 && dado <= 5) {
                     Main.alien.setDano(20);
                     System.out.println("'Bit Laser' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 } else if (dado == 6) {
                     Main.alien.setDano(40);
                     System.out.println("'Shockwave' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 }
-
-                System.out.println("------------------");
             }
 
             // HARD MODE
@@ -184,7 +162,6 @@ public class Relampago extends Personagem {
                 System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
                 System.out.println();
 
-                System.out.println("----------------");
                 // Golpes Relâmpago
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Lightning Attack'");
@@ -192,7 +169,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("E")) {
                         Main.relampago.setDano(10);
                         System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -207,7 +183,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Q")) {
                         Main.relampago.setDano(20);
                         System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -222,7 +197,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.relampago.setDano(40);
                         System.out.println("'Hail Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                        System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
                     }
 
                     // Punição
@@ -232,8 +206,6 @@ public class Relampago extends Personagem {
                     }
                 }
 
-                System.out.println("-----------------");
-
                 // Alien
                 dado = Main.random.gerarNumeroAleatorio();
 
@@ -241,34 +213,31 @@ public class Relampago extends Personagem {
                 System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
                 System.out.println();
 
-                System.out.println("------------------");
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
                     Main.alien.setDano(15);
                     System.out.println("'Split Kick' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 }
                 else if (dado >= 3 && dado <= 5) {
                     Main.alien.setDano(25);
                     System.out.println("'Bit Laser' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 }
                 else if (dado == 6) {
                     Main.alien.setDano(50);
                     System.out.println("'Shockwave' Attack!" + " +" + Main.alien.getDano() + " alien damage ");
-                    System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
                 }
-
-                System.out.println("--------------------");
-
             }
 
             if (Main.relampago.getVidaFinal() > 0 && Main.alien.getVidaFinal() > 0) {
 
+                System.out.println("SPECIAL SKILL!");
                 // SPECIAL SKILL
-                System.out.println("abilidade especial do Relâmpago adiciona +3 de dano ao alien, " +
+                System.out.println("Relâmpago adiciona +3 de dano ao alien, " +
                         "agora Alien está com " + Main.alien.getVida(3) + " hp ");
             }
+
+            System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");
+            System.out.println("Relâmpago está com " + Main.relampago.getVida(Main.alien.getDano()) + " hp ");
         }
 
         System.out.println("-----------------");

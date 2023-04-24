@@ -78,7 +78,6 @@ public class Main {
             escolhaDoPersonagem = prompt.next();
          }
 
-
         // Inicia o jogo
         if (perguntaStart()) {
 

@@ -1,3 +1,5 @@
-public class RaioLaser extends Start {
-    RaioLaser(int vida) {this.vida = vida;}
+public class RaioLaser extends Personagem {
+    RaioLaser(int vida) {
+        this.vida=vida;
+    }
 }

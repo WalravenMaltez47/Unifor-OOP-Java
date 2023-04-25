@@ -233,7 +233,7 @@ public class MuqueMan extends Personagem {
             System.out.println("SPECIAL SKILL!");
             // SPECIAL SKILL
             if (Main.muqueMan.getVidaFinal() > 0 && Main.alien.getVidaFinal() > 0) {
-                 Main.muqueMan.getVida(-5);
+                System.out.println(Main.muqueMan.getVida(-5) + " hp ");
             }
         }
 

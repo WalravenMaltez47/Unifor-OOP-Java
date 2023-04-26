@@ -28,7 +28,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano e agora está com " + Main.relampago.getVida(5) + " hp ");
+                        System.out.println("Relâmpago sofre +5 de dano");
+                        Main.relampago.getVida(5);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -42,7 +43,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano e agora está com " + Main.relampago.getVida(5) + " hp ");
+                        System.out.println("Relâmpago sofre +5 de dano");
+                        Main.relampago.getVida(5);
                     }
                 }
                 else if (dado == 6) {
@@ -56,7 +58,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano e agora está com " + Main.relampago.getVida(5) + " hp ");
+                        System.out.println("Relâmpago sofre +5 de dano");
+                        Main.relampago.getVida(5);
                     }
                 }
 
@@ -101,7 +104,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano e agora está com " + Main.relampago.getVida(5) + " hp ");
+                        System.out.println("Relâmpago sofre +5 de dano");
+                        Main.relampago.getVida(5);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -115,7 +119,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +6 de dano e agora está com " + Main.relampago.getVida(6) + " hp ");
+                        System.out.println("Relâmpago sofre +6 de dano");
+                        Main.relampago.getVida(6);
                     }
                 }
                 else if (dado == 6) {
@@ -129,7 +134,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +7 de dano e agora está com " + Main.relampago.getVida(7) + " hp ");
+                        System.out.println("Relâmpago sofre +7 de dano");
+                        Main.relampago.getVida(7);
                     }
                 }
 
@@ -174,7 +180,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +7 de dano e agora está com " + Main.relampago.getVida(7) + " hp ");
+                        System.out.println("Relâmpago sofre +7 de dano");
+                        Main.relampago.getVida(7);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -188,7 +195,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +10 de dano e agora está com " + Main.relampago.getVida(10) + " hp ");
+                        System.out.println("Relâmpago sofre +10 de dano");
+                        Main.relampago.getVida(10);
                     }
                 }
                 else if (dado == 6) {
@@ -202,7 +210,8 @@ public class Relampago extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +15 de dano e agora está com " + Main.relampago.getVida(15) + " hp ");
+                        System.out.println("Relâmpago sofre +15 de dano");
+                        Main.relampago.getVida(15);
                     }
                 }
 
@@ -232,8 +241,8 @@ public class Relampago extends Personagem {
 
                 System.out.println("SPECIAL SKILL!");
                 // SPECIAL SKILL
-                System.out.println("Relâmpago adiciona +3 de dano ao alien, " +
-                        "agora Alien está com " + Main.alien.getVida(3) + " hp ");
+                System.out.println("Relâmpago adiciona +3 de dano ao alien");
+                Main.alien.getVida(3);
             }
 
             System.out.println("Alien está com " + Main.alien.getVida(Main.relampago.getDano()) + " hp ");

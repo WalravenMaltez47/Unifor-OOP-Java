@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.time.LocalDate;
+
 public class Main {
     static String dificuldade;
     static Scanner prompt = new Scanner(System.in);
@@ -18,8 +21,8 @@ public class Main {
         String start = prompt.next();
 
         try {
-            new StartGame(start);
-        } catch (StartGameException e) {
+            new PlaytheGame(start);
+        } catch (PlayTheGameException e) {
             System.out.println("Failed! Try again");
             System.out.println();
 
@@ -28,76 +31,97 @@ public class Main {
 
         return true;
     }
-    public static void main(String[] args) {
 
-        // Escolha da dificuldade
-        System.out.println("Escolha a difuldade");
-        System.out.println("Escreva 'EASY' para fácil");
-        System.out.println("Escreva 'STANDARD' para dificuldade padrão");
-        System.out.println("Escreva 'Hard' para dificuldade difícil");
-        dificuldade = prompt.next();
+    public static void main(String[] args) {  int contador = 0;
 
-        while (!dificuldade.equalsIgnoreCase("EASY")
-               &&
-               !dificuldade.equalsIgnoreCase("STANDARD")
-               &&
-               !dificuldade.equalsIgnoreCase("HARD")) {
+        do {
 
-            System.out.println("Failed! Try again");
-            System.out.println();
+           // Escolha da dificuldade
+           System.out.println("Escolha a difuldade");
+           System.out.println("Escreva 'EASY' para fácil");
+           System.out.println("Escreva 'STANDARD' para dificuldade padrão");
+           System.out.println("Escreva 'Hard' para dificuldade difícil");
+           dificuldade = prompt.next();
 
-            System.out.println("Escolha a difuldade");
-            System.out.println("Escreva 'EASY' para fácil");
-            System.out.println("Escreva 'STANDARD' para dificuldade padrão");
-            System.out.println("Escreva 'Hard' para dificuldade difícil");
+           while (!dificuldade.equalsIgnoreCase("EASY")
+                   &&
+                   !dificuldade.equalsIgnoreCase("STANDARD")
+                   &&
+                   !dificuldade.equalsIgnoreCase("HARD")) {
 
-            dificuldade = prompt.next();
-       }
+               System.out.println("Failed! Try again");
+               System.out.println();
 
-        // Escolha do personagem
-        System.out.println("Escolha seu personagem: ");
-        System.out.println("1 - Muque-Man");
-        System.out.println("2 - Raio-Laser");
-        System.out.println("3 - Relâmpago");
-        String escolhaDoPersonagem = prompt.next();
+               System.out.println("Escolha a difuldade");
+               System.out.println("Escreva 'EASY' para fácil");
+               System.out.println("Escreva 'STANDARD' para dificuldade padrão");
+               System.out.println("Escreva 'Hard' para dificuldade difícil");
 
-        while (!escolhaDoPersonagem.equals("1")
-                &&
-                !escolhaDoPersonagem.equals("2")
-                &&
-                !escolhaDoPersonagem.equals("3")) {
+               dificuldade = prompt.next();
+           }
 
-            System.out.println("Failed! Try again");
-            System.out.println();
+           // Escolha do personagem
+           System.out.println("Escolha seu personagem: ");
+           System.out.println("1 - Muque-Man");
+           System.out.println("2 - Raio-Laser");
+           System.out.println("3 - Relâmpago");
+           String escolhaDoPersonagem = prompt.next();
 
-            System.out.println("Escolha seu personagem: ");
-            System.out.println("1 - Muque-Man");
-            System.out.println("2 - Raio-Laser");
-            System.out.println("3 - Relâmpago");
+           while (!escolhaDoPersonagem.equals("1")
+                   &&
+                   !escolhaDoPersonagem.equals("2")
+                   &&
+                   !escolhaDoPersonagem.equals("3")) {
 
-            escolhaDoPersonagem = prompt.next();
-         }
+               System.out.println("Failed! Try again");
+               System.out.println();
 
-        // Inicia o jogo
-        if (perguntaStart()) {
+               System.out.println("Escolha seu personagem: ");
+               System.out.println("1 - Muque-Man");
+               System.out.println("2 - Raio-Laser");
+               System.out.println("3 - Relâmpago");
 
-            switch (escolhaDoPersonagem) {
+               escolhaDoPersonagem = prompt.next();
+           }
 
-                // Muque-Man
-                case "1": muqueMan.start();
-                break;
+           // Inicia o jogo
+           if (perguntaStart()) {
 
-                // Raio-Laser
-                case "2": raioLaser.start();
-                break;
+               switch (escolhaDoPersonagem) {
 
-                // Relâmpago
-                case "3": relampago.start();
-                break;
+                   // Muque-Man
+                   case "1": muqueMan.start();
+                       break;
 
-                default:
-                    break;
-            }
-        }
+                   // Raio-Laser
+                   case "2": raioLaser.start();
+                       break;
+
+                   // Relâmpago
+                   case "3": relampago.start();
+                       break;
+
+                   default:
+                       break;
+               }
+
+               System.out.println("FIM DE JOGO!!!");
+               System.out.println();
+
+               // Salva jogo
+               LocalDate today = LocalDate.now();
+               ArrayList<LocalDate> dates = new ArrayList<>();
+               dates.add(today);
+               System.out.println("save #"+contador);
+               System.out.println("Game saved on " + dates.get(0));
+
+           }
+
+           contador++;
+
+           System.out.println();
+           System.out.println("New save");
+
+       }while (perguntaStart());
     }
 }

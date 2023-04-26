@@ -1,12 +1,11 @@
-import java.util.ArrayList;
 public class Aluno {
    String matricula;
    String nome;
-   double media;
-   public Aluno(String matricula, String nome, double media) {
+   double nota;
+   public Aluno(String matricula, String nome, double nota) {
        this.matricula = matricula;
        this.nome = nome;
-       this.media = media;
+       this.nota = nota;
    }
    public String getMatricula() {
         return matricula;
@@ -14,7 +13,7 @@ public class Aluno {
    public String getNome() {
         return nome;
    }
-   public double getMedia() {
-        return media;
+   public double getNota() {
+        return nota;
    }
 }

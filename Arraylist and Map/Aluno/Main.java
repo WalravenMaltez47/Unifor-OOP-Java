@@ -12,7 +12,7 @@ public class Main {
 
     public static void pegaDados() {
         System.out.println("Matricula:");
-         matricula = scanner.next();
+          matricula = scanner.next();
         System.out.println("Nome:");
          nome = scanner.next();
 
@@ -39,7 +39,7 @@ public class Main {
 
         System.out.println("Matricula: " + aluno.get("2210352").getMatricula());
         System.out.println("Nome: " + aluno.get("2210352").getNome());
-        System.out.println("Nota: " + aluno.get("2210352").getMedia());
+        System.out.println("Nota: " + aluno.get("2210352").getNota());
 
     }
 }

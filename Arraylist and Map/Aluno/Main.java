@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static ArrayList <Double> notas = new ArrayList<>();
+    static ArrayList <Double> nota = new ArrayList<>();
 
     static String matricula;
     static String nome;
@@ -19,7 +19,7 @@ public class Main {
          for (int i = 0; i < 5; i++) {
              System.out.println("Digite a nota:");
              Double valor = scanner.nextDouble();
-             notas.add(valor);
+             nota.add(valor);
          }
 
         System.out.println("=================");
@@ -34,7 +34,7 @@ public class Main {
 
         for (int i = 0; i < quantidadeDeAlunos; i++) {
             pegaDados();
-            aluno.put(matricula,new Aluno(matricula,nome, new CalculoDaMedia(notas).getNota()));
+            aluno.put(matricula,new Aluno(matricula,nome, new CalculoDaMedia(nota).getCalculoDaMedia()));
         }
 
         System.out.println("Matricula: " + aluno.get("2210352").getMatricula());

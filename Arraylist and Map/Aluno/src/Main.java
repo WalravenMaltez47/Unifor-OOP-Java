@@ -36,13 +36,11 @@ public class Main {
             aluno.put(matricula,new Aluno(matricula,nome, new CalculoDaMedia(nota).getCalculoDaMedia()));
         }
 
-
         for (String dadosDoAluno : Arrays.asList("Matricula: " + aluno.get("2210352").getMatricula(),
                 "Nome: " + aluno.get("2210352").getNome(),
                 "Nota: " + aluno.get("2210352").getNota())) {
 
             System.out.println(dadosDoAluno);
         }
-
     }
 }

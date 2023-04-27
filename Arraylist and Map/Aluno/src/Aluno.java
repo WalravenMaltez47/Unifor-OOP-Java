@@ -1,3 +1,5 @@
+package src;
+
 public class Aluno {
    String matricula;
    String nome;

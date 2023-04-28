@@ -27,7 +27,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -41,7 +42,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 }
                 else if (dado == 6) {
@@ -55,7 +57,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 }
 
@@ -102,7 +105,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 } else if (dado >= 3 && dado <= 5) {
                     System.out.println("'Q' para 'Tornado'");
@@ -115,7 +119,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +6 de dano e agora está com " + Main.muqueMan.getVida(6) + " hp ");
+                        System.out.println("Muque-Man sofre +6 de dano");
+                        Main.muqueMan.getVida(6);
                     }
                 } else if (dado == 6) {
                     System.out.println("'Z' para 'Berserker'");
@@ -128,7 +133,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +7 de dano e agora está com " + Main.muqueMan.getVida(7) + " hp ");
+                        System.out.println("Muque-Man sofre +7 de dano");
+                        Main.muqueMan.getVida(7);
                     }
                 }
 
@@ -171,7 +177,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +7 de dano e agora está com " + Main.muqueMan.getVida(7) + " hp ");
+                        System.out.println("Muque-Man sofre +7 de dano");
+                        Main.muqueMan.getVida(7);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -185,7 +192,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +10 de dano e agora está com " + Main.muqueMan.getVida(10) + " hp ");
+                        System.out.println("Muque-Man sofre +10 de dano");
+                        Main.muqueMan.getVida(10);
                     }
                 }
                 else if (dado == 6) {
@@ -199,7 +207,8 @@ public class MuqueMan extends Personagem {
                     // Punição
                     else {
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +15 de dano e agora está com " + Main.muqueMan.getVida(15) + " hp ");
+                        System.out.println("Muque-Man sofre +15 de dano");
+                        Main.muqueMan.getVida(15);
                     }
                 }
 

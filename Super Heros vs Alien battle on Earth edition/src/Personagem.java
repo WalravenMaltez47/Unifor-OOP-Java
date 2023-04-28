@@ -3,6 +3,8 @@ public abstract class Personagem implements InterfaceDoJogo {
     public int dado;
     public String golpe;
 
+    public String dificuldade;
+
     // dano
     public int dano;
     @Override

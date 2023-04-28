@@ -24,13 +24,6 @@ public class Relampago extends Personagem {
                         Main.relampago.setDano(10);
                         System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
                     }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano");
-                        Main.relampago.getVida(5);
-                    }
                 }
                 else if (dado >= 3 && dado <= 5) {
                     System.out.println("Q para 'Lightning Storm'");
@@ -39,13 +32,6 @@ public class Relampago extends Personagem {
                         Main.relampago.setDano(20);
                         System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
                     }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano");
-                        Main.relampago.getVida(5);
-                    }
                 }
                 else if (dado == 6) {
                     System.out.println("'Z' para 'Hail Storm'");
@@ -53,13 +39,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.relampago.setDano(40);
                         System.out.println("'Hail Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano");
-                        Main.relampago.getVida(5);
                     }
                 }
 
@@ -96,32 +75,14 @@ public class Relampago extends Personagem {
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Lightning Attack'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("E")) {
-                        Main.relampago.setDano(10);
-                        System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +5 de dano");
-                        Main.relampago.getVida(5);
-                    }
+                    Main.relampago.setDano(10);
+                    System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
                 }
                 else if (dado >= 3 && dado <= 5) {
                     System.out.println("Q para 'Lightning Storm'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Q")) {
-                        Main.relampago.setDano(20);
-                        System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +6 de dano");
-                        Main.relampago.getVida(6);
-                    }
+                    Main.relampago.setDano(20);
+                    System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
                 }
                 else if (dado == 6) {
                     System.out.println("'Z' para 'Hail Storm'");
@@ -129,13 +90,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.relampago.setDano(40);
                         System.out.println("'Hail Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +7 de dano");
-                        Main.relampago.getVida(7);
                     }
                 }
 
@@ -176,13 +130,6 @@ public class Relampago extends Personagem {
                         Main.relampago.setDano(10);
                         System.out.println("'Lightnig Attack' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
                     }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +7 de dano");
-                        Main.relampago.getVida(7);
-                    }
                 }
                 else if (dado >= 3 && dado <= 5) {
                     System.out.println("Q para 'Lightning Storm'");
@@ -191,13 +138,6 @@ public class Relampago extends Personagem {
                         Main.relampago.setDano(20);
                         System.out.println("'Lightning Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
                     }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +10 de dano");
-                        Main.relampago.getVida(10);
-                    }
                 }
                 else if (dado == 6) {
                     System.out.println("'Z' para 'Hail Storm'");
@@ -205,13 +145,6 @@ public class Relampago extends Personagem {
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.relampago.setDano(40);
                         System.out.println("'Hail Storm' Attack!" + " +" + Main.relampago.getDano() + " magic damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Relâmpago sofre +15 de dano");
-                        Main.relampago.getVida(15);
                     }
                 }
 

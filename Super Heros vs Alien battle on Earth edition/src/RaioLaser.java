@@ -19,44 +19,20 @@ public class RaioLaser extends Personagem {
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Optic Blast'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("E")) {
-                        Main.raioLaser.setDano(10);
-                        System.out.println("'Optic Blast' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +5 de dano e agora está com " + Main.raioLaser.getVida(5) + " hp ");
-                    }
+                    Main.raioLaser.setDano(10);
+                    System.out.println("'Optic Blast' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
                 else if (dado >= 3 && dado <= 5) {
                     System.out.println("'Q' para 'Mega Optic'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Q")) {
-                        Main.raioLaser.setDano(20);
-                        System.out.println("'Mega Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +5 de dano e agora está com " + Main.raioLaser.getVida(5) + " hp ");
-                    }
+                    Main.raioLaser.setDano(20);
+                    System.out.println("'Mega Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
                 else if (dado == 6) {
                     System.out.println("'Z' para 'Super Optic'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Z")) {
-                        Main.raioLaser.setDano(40);
-                        System.out.println("'Super Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +5 de dano e agora está com " + Main.raioLaser.getVida(5) + " hp ");
-                    }
+                    Main.raioLaser.setDano(40);
+                    System.out.println("'Super Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
 
                 // Alien
@@ -92,44 +68,20 @@ public class RaioLaser extends Personagem {
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Optic Blast'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("E")) {
-                        Main.raioLaser.setDano(10);
-                        System.out.println("'Optic Blast' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +5 de dano e agora está com " + Main.raioLaser.getVida(5) + " hp ");
-                    }
+                    Main.raioLaser.setDano(10);
+                    System.out.println("'Optic Blast' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
                 else if (dado >= 3 && dado <= 5) {
                     System.out.println("'Q' para 'Mega Optic'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Q")) {
-                        Main.raioLaser.setDano(20);
-                        System.out.println("'Mega Optic' Attack!" + " +" + Main.raioLaser.getDano()  + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +6 de dano e agora está com " + Main.raioLaser.getVida(6) + " hp ");
-                    }
+                    Main.raioLaser.setDano(20);
+                    System.out.println("'Mega Optic' Attack!" + " +" + Main.raioLaser.getDano()  + " +("+Round*3+") " + " range damage ");
                 }
                 else if (dado == 6) {
                     System.out.println("'Z' para 'Super Optic'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Z")) {
-                        Main.raioLaser.setDano(40);
-                        System.out.println("'Super Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +7 de dano e agora está com " + Main.raioLaser.getVida(7) + " hp ");
-                    }
+                    Main.raioLaser.setDano(40);
+                    System.out.println("'Super Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
 
                 // Alien
@@ -167,45 +119,20 @@ public class RaioLaser extends Personagem {
                 if (dado == 1 || dado == 2) {
                     System.out.println("'E' para 'Optic Blast'");
                     golpe = Main.prompt.next();
-
-                    if (golpe.equalsIgnoreCase("E")) {
-                        Main.raioLaser.setDano(10);
-                        System.out.println("'Optic Blast' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +7 de dano e agora está com " + Main.raioLaser.getVida(7) + " hp ");
-                    }
+                    Main.raioLaser.setDano(10);
+                    System.out.println("'Optic Blast' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
                 else if (dado >= 3 && dado <= 5) {
                     System.out.println("'Q' para 'Mega Optic'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Q")) {
-                        Main.raioLaser.setDano(20);
-                        System.out.println("'Mega Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +10 de dano e agora está com " + Main.raioLaser.getVida(10) + " hp ");
-                    }
+                    Main.raioLaser.setDano(20);
+                    System.out.println("'Mega Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
                 else if (dado == 6) {
                     System.out.println("'Z' para 'Super Optic'");
                     golpe = Main.prompt.next();
-                    if (golpe.equalsIgnoreCase("Z")) {
-                        Main.raioLaser.setDano(40);
-                        System.out.println("'Super Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
-                    }
-
-                    // Punição
-                    else {
-                        System.out.println("Punição!");
-                        System.out.println("Raio-Laser sofre +15 de dano e agora está com " + Main.raioLaser.getVida(15) + " hp ");
-                    }
+                    Main.raioLaser.setDano(40);
+                    System.out.println("'Super Optic' Attack!" + " +" + Main.raioLaser.getDano() + " +("+Round*3+") " + " range damage ");
                 }
 
                 // Alien

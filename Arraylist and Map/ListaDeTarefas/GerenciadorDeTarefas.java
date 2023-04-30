@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class GerenciadorDeTarefas {
-    static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     static LocalDate today = LocalDate.now();
     public GerenciadorDeTarefas() {
 
@@ -19,8 +19,8 @@ public class GerenciadorDeTarefas {
             System.out.println("descricao:");
             descricao = scanner.next();
 
-            Tarefa tarefa = new Tarefa(name, descricao, today);
-            mapName.put(name,tarefa);
+            // Put the information in mapName
+            mapName.put(name,new Tarefa(name,descricao,today));
         }
 
         while (true) {
@@ -34,6 +34,7 @@ public class GerenciadorDeTarefas {
             if (palavraChave==null)
                 System.out.println("projeto inixistente");
             else {
+                // Get the information from mapName
                 for (String projeto : Arrays.asList(
                         "O nome do projeto: " + palavraChave.getName(),
                         "A descricao: " + palavraChave.getDescricao(),

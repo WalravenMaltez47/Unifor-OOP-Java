@@ -5,7 +5,7 @@ import java.util.*;
 public class GerenciadorDeTarefas {
     Scanner scanner = new Scanner(System.in);
     static LocalDate today = LocalDate.now();
-    public GerenciadorDeTarefas() {
+    public GerenciadorDeTarefas() throws InterruptedException {
 
         String name;
         String descricao;
@@ -23,6 +23,7 @@ public class GerenciadorDeTarefas {
             mapName.put(name,new Tarefa(name,descricao,today));
         }
 
+        Thread.sleep(2000);
         while (true) {
             System.out.println("Pesquisa: 'palavraChave' ");
             System.out.println("Saida: 'sair'");

@@ -13,7 +13,7 @@ No método main, crie uma instância da classe GerenciadorDeTarefas e use os mé
  */
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
         GerenciadorDeTarefas gerenciadorDeTarefas = new GerenciadorDeTarefas();
     }
 }

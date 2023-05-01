@@ -3,5 +3,5 @@ interface InterfaceDoJogo {
    int getDano();
    int getVida(int dano);
    int getVidaFinal();
-   public void start();
+   public void start() throws InterruptedException;
 }

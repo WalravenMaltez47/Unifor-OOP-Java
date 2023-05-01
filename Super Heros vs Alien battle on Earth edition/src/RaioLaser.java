@@ -3,17 +3,15 @@ public class RaioLaser extends Personagem {
         this.vida = vida;
     }
     @Override
-    public void start() {
+    public void start() throws InterruptedException {
         for (Round = 0; Round < 6 && Main.raioLaser.getVidaFinal() > 0 && Main.alien.getVidaFinal() > 0; Round++) {
 
             // EASY MODE
             if (Main.dificuldade.equalsIgnoreCase("EASY")) {
-
+                System.out.println("Vez do Raio-Laser...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Raio-Laser
                 if (dado == 1 || dado == 2) {
@@ -36,11 +34,10 @@ public class RaioLaser extends Personagem {
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -57,12 +54,10 @@ public class RaioLaser extends Personagem {
 
             // STANDARD MODE
             if (Main.dificuldade.equalsIgnoreCase("STANDARD")) {
-
+                System.out.println("Vez do Raio-Laser...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Raio-Laser...Jogando os dados...deu  " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Raio-Laser
                 if (dado == 1 || dado == 2) {
@@ -85,11 +80,10 @@ public class RaioLaser extends Personagem {
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -108,12 +102,10 @@ public class RaioLaser extends Personagem {
 
             // HARD MODE
             if (Main.dificuldade.equalsIgnoreCase("HARD")) {
-
+                System.out.println("Vez do Raio-Laser...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Raio-Laser...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Raio-Laser
                 if (dado == 1 || dado == 2) {
@@ -136,11 +128,10 @@ public class RaioLaser extends Personagem {
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {

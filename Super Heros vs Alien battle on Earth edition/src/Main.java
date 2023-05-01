@@ -31,9 +31,7 @@ public class Main {
         return true;
     }
 
-    static String playAgain;
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int contador = 0;
 
         // Escolha da dificuldade

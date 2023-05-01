@@ -3,18 +3,17 @@ public class Relampago extends Personagem {
         this.vida = vida;
     }
     @Override
-    public void start() {
+    public void start() throws InterruptedException {
 
         for (Round = 1; Round <= 6 && Main.relampago.getVidaFinal() > 0 && Main.alien.getVidaFinal() > 0; Round++) {
 
             // EASY MODE
+
             if (Main.dificuldade.equalsIgnoreCase("EASY")) {
-
+                System.out.println("Vez do Relampago...Jogando os dados...deu");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Relâmpago
                 if (dado == 1 || dado == 2) {
@@ -43,11 +42,10 @@ public class Relampago extends Personagem {
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -64,12 +62,10 @@ public class Relampago extends Personagem {
 
             // STANDARD MODE
             if (Main.dificuldade.equalsIgnoreCase("STANDARD")) {
-
+                System.out.println("Vez do Relampago...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Relâmpago
                 if (dado == 1 || dado == 2) {
@@ -94,11 +90,10 @@ public class Relampago extends Personagem {
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -115,12 +110,10 @@ public class Relampago extends Personagem {
 
             // HARD MODE
             if (Main.dificuldade.equalsIgnoreCase("HARD")) {
-
+                System.out.println("Vez do Relampago...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Relampago...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Relâmpago
                 if (dado == 1 || dado == 2) {
@@ -149,11 +142,10 @@ public class Relampago extends Personagem {
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu...");
+                Thread.sleep(2500);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {

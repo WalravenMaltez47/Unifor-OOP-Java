@@ -1,3 +1,5 @@
+import java.util.concurrent.locks.ReentrantLock;
+
 public class MuqueMan extends Personagem {
     MuqueMan(int vida) {
         this.vida=vida;
@@ -10,7 +12,7 @@ public class MuqueMan extends Personagem {
             // EASY MODE
             if (Main.dificuldade.equalsIgnoreCase("EASY")) {
                 System.out.println("Vez do Muque-Man...Jogando os dados...deu... ");
-                Thread.sleep(2500);
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
                 System.out.println(dado);
 
@@ -20,11 +22,10 @@ public class MuqueMan extends Personagem {
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("E")) {
                         Main.muqueMan.setDano(10);
-                        System.out.println("'Chute' Attack!" + " +" + Main.muqueMan.getDano() + " melee damage ");
+                        System.out.println("'Chute' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
-                    // Punição
                     else {
+                        // Punição
                         System.out.println("Punição!");
                         System.out.println("Muque-Man sofre +5 de dano");
                         Main.muqueMan.getVida(5);
@@ -35,7 +36,7 @@ public class MuqueMan extends Personagem {
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Q")) {
                         Main.muqueMan.setDano(20);
-                        System.out.println("'Tornado' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
+                        System.out.println("'Tornado' Attack!" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
 
                     // Punição
@@ -63,7 +64,7 @@ public class MuqueMan extends Personagem {
 
                 // Alien
                 System.out.println("Vez do Alien...Jogando os dados...deu... ");
-                Thread.sleep(2500);
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
                 System.out.println(dado);
 
@@ -84,7 +85,7 @@ public class MuqueMan extends Personagem {
             // STANDARD MODE
             if (Main.dificuldade.equalsIgnoreCase("STANDARD")) {
                 System.out.println("Vez do Muque-Man...Jogando os dados...deu... ");
-                Thread.sleep(2500);
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
                 System.out.println(dado);
 
@@ -135,7 +136,7 @@ public class MuqueMan extends Personagem {
 
                 // Alien
                 System.out.println("Vez do Alien...Jogando os dados...deu... ");
-                Thread.sleep(2500);
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
                 System.out.println(dado);
 
@@ -155,7 +156,7 @@ public class MuqueMan extends Personagem {
             // HARD MODE
             if (Main.dificuldade.equalsIgnoreCase("HARD")) {
                 System.out.println("Vez do Muque-Man...Jogando os dados...deu... ");
-                Thread.sleep(2500);
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
                 System.out.println(dado);
 
@@ -208,7 +209,7 @@ public class MuqueMan extends Personagem {
 
                 // Alien
                 System.out.println("Vez do Alien...Jogando os dados...deu... ");
-                Thread.sleep(2500);
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
                 System.out.println(dado);
 
@@ -225,12 +226,17 @@ public class MuqueMan extends Personagem {
                 }
             }
 
+            // VIDAS
             System.out.println();
-
+            // Problema com o sistema de punicao
+            // mesmo ao ocorrer a punicao
+            // o dano anterior armazenado continua incrementando
+            // com isso o Alien perde vida mesmo se o heroi nao der mais um novo dano
+            // ele continua a perder vida devido ao dano anterior
             System.out.println("Alien está com " + Main.alien.getVida(Main.muqueMan.getDano()) + " hp ");
             System.out.println("Muque-Man está com " + Main.muqueMan.getVida(Main.alien.getDano()) + " hp ");
-
             System.out.println();
+
 
             System.out.println("SPECIAL SKILL!");
             // SPECIAL SKILL

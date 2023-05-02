@@ -1,9 +1,9 @@
+import java.util.concurrent.locks.ReentrantLock;
+
 public abstract class Personagem implements InterfaceDoJogo {
     public int Round;
     public int dado;
     public String golpe;
-
-    public String dificuldade;
 
     // dano
     public int dano;

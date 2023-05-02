@@ -10,6 +10,7 @@ public class GerenciadorDeTarefas {
         String name;
         String descricao;
 
+        // Define the Map
         Map <String, Tarefa> mapName = new HashMap<>();
 
         for (int i = 0; i < 2; i++) {

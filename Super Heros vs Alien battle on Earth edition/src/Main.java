@@ -15,6 +15,7 @@ public class Main {
     static Relampago relampago = new Relampago(hpDoHero);
     static EvilAlien alien = new EvilAlien(hpDoAlien);
 
+
     public static boolean perguntaStart() {
         System.out.println("digite 'start' para comecar");
         String start = prompt.next();

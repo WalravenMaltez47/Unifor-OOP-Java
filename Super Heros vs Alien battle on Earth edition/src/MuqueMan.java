@@ -1,19 +1,19 @@
+import java.util.concurrent.locks.ReentrantLock;
+
 public class MuqueMan extends Personagem {
     MuqueMan(int vida) {
         this.vida=vida;
     }
-    @Override
-    public void start() {
+    public void start() throws InterruptedException {
 
         for (Round = 1; Round <= 6 && Main.muqueMan.getVidaFinal()>0 && Main.alien.getVidaFinal()>0; Round++) {
 
             // EASY MODE
             if (Main.dificuldade.equalsIgnoreCase("EASY")) {
+                System.out.println("Vez do Muque-Man...Jogando os dados...deu... ");
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Muque-man
                 if (dado == 1 || dado == 2) {
@@ -21,13 +21,14 @@ public class MuqueMan extends Personagem {
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("E")) {
                         Main.muqueMan.setDano(10);
-                        System.out.println("'Chute' Attack!" + " +" + Main.muqueMan.getDano() + " melee damage ");
+                        System.out.println("'Chute' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -35,13 +36,14 @@ public class MuqueMan extends Personagem {
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Q")) {
                         Main.muqueMan.setDano(20);
-                        System.out.println("'Tornado' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
+                        System.out.println("'Tornado' Attack!" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 }
                 else if (dado == 6) {
@@ -51,21 +53,20 @@ public class MuqueMan extends Personagem {
                         Main.muqueMan.setDano(40);
                         System.out.println("'Berserker' Attack!" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu... ");
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
-
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -83,12 +84,10 @@ public class MuqueMan extends Personagem {
 
             // STANDARD MODE
             if (Main.dificuldade.equalsIgnoreCase("STANDARD")) {
-
+                System.out.println("Vez do Muque-Man...Jogando os dados...deu... ");
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Muque-man
                 if (dado == 1 || dado == 2) {
@@ -98,44 +97,50 @@ public class MuqueMan extends Personagem {
                         Main.muqueMan.setDano(10);
                         System.out.println("'Chute' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +5 de dano e agora está com " + Main.muqueMan.getVida(5) + " hp ");
+                        System.out.println("Muque-Man sofre +5 de dano");
+                        Main.muqueMan.getVida(5);
                     }
-                } else if (dado >= 3 && dado <= 5) {
+                }
+                else if (dado >= 3 && dado <= 5) {
                     System.out.println("'Q' para 'Tornado'");
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Q")) {
                         Main.muqueMan.setDano(20);
                         System.out.println("'Tornado' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +6 de dano e agora está com " + Main.muqueMan.getVida(6) + " hp ");
+                        System.out.println("Muque-Man sofre +6 de dano");
+                        Main.muqueMan.getVida(6);
                     }
-                } else if (dado == 6) {
+                }
+                else if (dado == 6) {
                     System.out.println("'Z' para 'Berserker'");
                     golpe = Main.prompt.next();
                     if (golpe.equalsIgnoreCase("Z")) {
                         Main.muqueMan.setDano(40);
                         System.out.println("'Berserker' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +7 de dano e agora está com " + Main.muqueMan.getVida(7) + " hp ");
+                        System.out.println("Muque-Man sofre +7 de dano");
+                        Main.muqueMan.getVida(7);
                     }
                 }
 
-
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu... ");
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -152,12 +157,10 @@ public class MuqueMan extends Personagem {
 
             // HARD MODE
             if (Main.dificuldade.equalsIgnoreCase("HARD")) {
-
+                System.out.println("Vez do Muque-Man...Jogando os dados...deu... ");
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Muque-Man...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Muque-man
                 if (dado == 1 || dado == 2) {
@@ -167,11 +170,12 @@ public class MuqueMan extends Personagem {
                         Main.muqueMan.setDano(10);
                         System.out.println("'Chute' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +7 de dano e agora está com " + Main.muqueMan.getVida(7) + " hp ");
+                        System.out.println("Muque-Man sofre +7 de dano");
+                        Main.muqueMan.getVida(7);
                     }
                 }
                 else if (dado >= 3 && dado <= 5) {
@@ -181,11 +185,12 @@ public class MuqueMan extends Personagem {
                         Main.muqueMan.setDano(20);
                         System.out.println("''Tornado' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +10 de dano e agora está com " + Main.muqueMan.getVida(10) + " hp ");
+                        System.out.println("Muque-Man sofre +10 de dano");
+                        Main.muqueMan.getVida(10);
                     }
                 }
                 else if (dado == 6) {
@@ -195,20 +200,20 @@ public class MuqueMan extends Personagem {
                         Main.muqueMan.setDano(40);
                         System.out.println("'Berserker' Attack!'" + " +" + Main.muqueMan.getDano() + " melee damage ");
                     }
-
                     // Punição
                     else {
+                        Main.muqueMan.setDano(0);
                         System.out.println("Punição!");
-                        System.out.println("Muque-Man sofre +15 de dano e agora está com " + Main.muqueMan.getVida(15) + " hp ");
+                        System.out.println("Muque-Man sofre +15 de dano");
+                        Main.muqueMan.getVida(15);
                     }
                 }
 
                 // Alien
+                System.out.println("Vez do Alien...Jogando os dados...deu... ");
+                Thread.sleep(2000);
                 dado = Main.random.gerarNumeroAleatorio();
-
-                System.out.println();
-                System.out.println("Vez do Alien...Jogando os dados...deu " + dado);
-                System.out.println();
+                System.out.println(dado);
 
                 // Golpes Alien
                 if (dado == 1 || dado == 2) {
@@ -223,12 +228,12 @@ public class MuqueMan extends Personagem {
                 }
             }
 
+            // Mostra Vida
             System.out.println();
-
             System.out.println("Alien está com " + Main.alien.getVida(Main.muqueMan.getDano()) + " hp ");
             System.out.println("Muque-Man está com " + Main.muqueMan.getVida(Main.alien.getDano()) + " hp ");
-
             System.out.println();
+
 
             System.out.println("SPECIAL SKILL!");
             // SPECIAL SKILL

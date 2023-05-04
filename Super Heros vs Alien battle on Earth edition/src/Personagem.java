@@ -1,8 +1,20 @@
 
-public abstract class Personagem implements InterfaceVida, InterfaceDano{
-    public int Round;
-    public int dado;
-    public String golpe;
+public abstract class Personagem implements InterfaceVida, InterfaceDano {
+
+    // vida
+    public int vida;
+    public Personagem(int vida) {
+        this.vida = vida;
+    }
+    @Override
+    public int getVida(int dano) {
+        this.vida = this.vida - dano;
+        return Math.max(this.vida, 0);
+    }
+    @Override
+    public int getVidaFinal() {
+        return Math.max(this.vida, 0);
+    }
 
     // dano
     public int dano;
@@ -15,15 +27,5 @@ public abstract class Personagem implements InterfaceVida, InterfaceDano{
         return this.dano;
     }
 
-    // vida
-    public int vida;
-    @Override
-    public int getVida(int dano) {
-        this.vida = this.vida - dano;
-        return Math.max(this.vida, 0);
-    }
-    @Override
-    public int getVidaFinal() {
-        return Math.max(this.vida, 0);
-    }
+
 }

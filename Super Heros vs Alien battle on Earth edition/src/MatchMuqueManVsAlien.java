@@ -16,7 +16,7 @@ public class MatchMuqueManVsAlien extends Match {
 
             System.out.println("SPECIAL SKILL!");
             // SPECIAL SKILL
-            if (Match.muqueMan.getVidaFinal() > 0 && alien.getVidaFinal() > 0) {
+            if (muqueMan.getVidaFinal() > 0 && alien.getVidaFinal() > 0) {
                 System.out.println(muqueMan.getVida(-5) + " hp ");
             }
         }
@@ -28,11 +28,11 @@ public class MatchMuqueManVsAlien extends Match {
         System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
         // Resultado
-        if (Match.muqueMan.getVidaFinal() > alien.getVidaFinal()) {
+        if (muqueMan.getVidaFinal() > alien.getVidaFinal()) {
             System.out.println();
             System.out.println("O vencedor é Muqueman!");
         }
-        else if (Match.muqueMan.getVidaFinal() < alien.getVidaFinal()) {
+        else if (muqueMan.getVidaFinal() < alien.getVidaFinal()) {
             System.out.println();
             System.out.println("O vencedor é Alien!");
         }

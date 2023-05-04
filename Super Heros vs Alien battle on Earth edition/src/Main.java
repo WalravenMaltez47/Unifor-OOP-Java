@@ -1,20 +1,7 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDate;
-
 public class Main {
     static Scanner prompt = new Scanner(System.in);
-    static RandomMethod random = new RandomMethod();
-    static String dificuldade;
-
-    // Setting a vida (HP)
-    static int hpDoHero = 200;
-    static int hpDoAlien = 200;
-    static MuqueMan muqueMan = new MuqueMan(hpDoHero);
-    static RaioLaser raioLaser = new RaioLaser(hpDoHero);
-    static Relampago relampago = new Relampago(hpDoHero);
-    static EvilAlien alien = new EvilAlien(hpDoAlien);
-
 
     public static boolean perguntaStart() {
         System.out.println("digite 'start' para comecar");
@@ -31,8 +18,7 @@ public class Main {
 
         return true;
     }
-
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  {
         int contador = 0;
 
         // Escolha da dificuldade
@@ -40,13 +26,13 @@ public class Main {
         System.out.println("Escreva 'EASY' para fácil");
         System.out.println("Escreva 'STANDARD' para dificuldade padrão");
         System.out.println("Escreva 'Hard' para dificuldade difícil");
-        dificuldade = prompt.next();
+        Match.dificuldade = prompt.next();
 
-        while (!dificuldade.equalsIgnoreCase("EASY")
+        while (!Match.dificuldade.equalsIgnoreCase("EASY")
                 &&
-                !dificuldade.equalsIgnoreCase("STANDARD")
+                !Match.dificuldade.equalsIgnoreCase("STANDARD")
                 &&
-                !dificuldade.equalsIgnoreCase("HARD")) {
+                !Match.dificuldade.equalsIgnoreCase("HARD")) {
 
             System.out.println("Failed! Try again");
             System.out.println();
@@ -55,7 +41,7 @@ public class Main {
             System.out.println("Escreva 'EASY' para fácil");
             System.out.println("Escreva 'STANDARD' para dificuldade padrão");
             System.out.println("Escreva 'Hard' para dificuldade difícil");
-            dificuldade = prompt.next();
+            Match.dificuldade = prompt.next();
         }
 
         // Escolha do personagem
@@ -87,15 +73,18 @@ public class Main {
 
             switch (escolhaDoPersonagem) {
                    // Muque-Man
-                case "1": muqueMan.start();
+                case "1":
+                    MatchMuqueManVsAlien matchMuqueManVsAlien = new MatchMuqueManVsAlien();
                 break;
 
                 // Raio-Laser
-                case "2": raioLaser.start();
+                case "2":
+                    MatchRaioLaserVsAlien matchRaioLaserVsAlien = new MatchRaioLaserVsAlien();
                 break;
 
                 // Relâmpago
-                case "3": relampago.start();
+                case "3":
+                    MatchRelampagoVsAlien matchRelampagoVsAlien = new MatchRelampagoVsAlien();
                 break;
 
                 default:

@@ -4,6 +4,8 @@ public class RandomMethod {
         Random random = new Random();
         return random.nextInt(6) + 1;
     }
+    static public RandomMethod random = new RandomMethod();
+    static public int dado;
 }
 
 

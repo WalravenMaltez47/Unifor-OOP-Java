@@ -36,7 +36,7 @@ public class MatchRaioLaserVsAlien extends Match {
         System.out.println("A vida final de Alien " + alien.getVidaFinal() + " hp ");
 
         // Resultado
-        if (Match.raioLaser.getVidaFinal() > alien.getVidaFinal()) {
+        if (raioLaser.getVidaFinal() > alien.getVidaFinal()) {
             System.out.println();
             System.out.println("O vencedor é Raio-Laser");
         } else if (raioLaser.getVidaFinal() < alien.getVidaFinal()) {

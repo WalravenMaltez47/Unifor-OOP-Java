@@ -7,7 +7,7 @@ public class Match {
     static Relampago relampago = new Relampago(hpDoHero);
     static EvilAlien alien = new EvilAlien(hpDoAlien);
 
-    // GENERICO
+    // GENÉRICO
     static String dificuldade;
     static int round;
     static int contadorDeRodada;

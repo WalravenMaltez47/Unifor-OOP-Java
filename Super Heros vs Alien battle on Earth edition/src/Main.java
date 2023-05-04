@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.time.LocalDate;
 public class Main {
     static Scanner prompt = new Scanner(System.in);
-
     public static boolean perguntaStart() {
         System.out.println("digite 'start' para comecar");
         String start = prompt.next();
@@ -18,6 +17,7 @@ public class Main {
 
         return true;
     }
+
     public static void main(String[] args)  {
         int contador = 0;
 

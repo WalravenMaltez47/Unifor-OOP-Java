@@ -1,5 +1,6 @@
 #TRABALHO DE AVF2(OOP) DE 2023
-// Acrescentei sistema de punição no jogo para caso o héroi erre o golpe
+// Acrescentei sistema de punição no jogo para caso o héroi erre o golpe.
+// Acrescentei sistema de dificuldade.
 
 O jogo começa com uma equipe de super-heróis enfrentando uma ameaça
 alienígena que invadiu a Terra. O jogador pode escolher um entre três

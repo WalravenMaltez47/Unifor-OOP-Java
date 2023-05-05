@@ -23,7 +23,6 @@ public class RaioLaser extends Personagem {
             }
             // Punição
             else {
-                Match.raioLaser.setDano(0);
                 Match.contadorDeRodada = 0;
                 System.out.println("Punição!");
                 // EASY MODE
@@ -54,7 +53,6 @@ public class RaioLaser extends Personagem {
             }
             // Punição
             else {
-                Match.raioLaser.setDano(0);
                 Match.contadorDeRodada = 0;
                 System.out.println("Punição!");
                 // EASY MODE
@@ -85,7 +83,6 @@ public class RaioLaser extends Personagem {
             }
             // Punição
             else {
-                Match.raioLaser.setDano(0);
                 Match.contadorDeRodada = 0;
                 System.out.println("Punição!");
                 // EASY MODE

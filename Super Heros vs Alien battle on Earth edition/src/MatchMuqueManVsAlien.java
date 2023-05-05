@@ -19,6 +19,9 @@ public class MatchMuqueManVsAlien extends Match {
             if (muqueMan.getVidaFinal() > 0 && alien.getVidaFinal() > 0) {
                 System.out.println(muqueMan.getVida(-5) + " hp ");
             }
+
+            // Reset Dano
+            Match.muqueMan.setDano(0);
         }
 
         System.out.println("=================");

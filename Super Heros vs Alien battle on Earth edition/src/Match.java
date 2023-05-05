@@ -1,4 +1,4 @@
-public class Match {
+public abstract class Match {
     // Setting a vida (HP)
     static int hpDoHero = 200;
     static int hpDoAlien = 200;

@@ -23,7 +23,6 @@ public class Relampago extends Personagem {
             }
             // Punição
             else {
-                Match.relampago.setDano(0);
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {
@@ -53,7 +52,6 @@ public class Relampago extends Personagem {
             }
             // Punição
             else {
-                Match.relampago.setDano(0);
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {
@@ -83,7 +81,6 @@ public class Relampago extends Personagem {
             }
             // Punição
             else {
-                Match.relampago.setDano(0);
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {

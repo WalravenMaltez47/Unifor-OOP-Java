@@ -20,6 +20,9 @@ public class MatchRelampagoVsAlien extends Match {
                 System.out.println("Relâmpago adiciona +3 de dano ao alien");
                 alien.getVida(3);
             }
+
+            // Reset Dano
+            Match.relampago.setDano(0);
         }
 
         System.out.println("=================");

@@ -23,7 +23,6 @@ public class MuqueMan extends Personagem {
             }
             // Punição
             else {
-                Match.muqueMan.setDano(0);
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {
@@ -53,7 +52,6 @@ public class MuqueMan extends Personagem {
             }
             // Punição
             else {
-                Match.muqueMan.setDano(0);
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {
@@ -83,7 +81,6 @@ public class MuqueMan extends Personagem {
             }
             // Punição
             else {
-                Match.muqueMan.setDano(0);
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {

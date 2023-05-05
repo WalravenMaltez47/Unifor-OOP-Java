@@ -1,9 +1,8 @@
-
 public abstract class Personagem implements InterfaceVida, InterfaceDano {
 
     // Vida
-    public int vida;
-    public Personagem(int vida) {
+    private int vida;
+    protected Personagem(int vida) {
         this.vida = vida;
     }
     @Override
@@ -17,7 +16,7 @@ public abstract class Personagem implements InterfaceVida, InterfaceDano {
     }
 
     // Dano
-    public int dano;
+    private int dano;
     @Override
     public void setDano(int dano) {
         this.dano = dano;

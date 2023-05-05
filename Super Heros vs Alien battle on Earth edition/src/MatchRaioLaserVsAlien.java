@@ -1,5 +1,5 @@
 public class MatchRaioLaserVsAlien extends Match {
-    public MatchRaioLaserVsAlien() {
+    protected MatchRaioLaserVsAlien() {
         for (round = 0; round < 6
                 && raioLaser.getVidaFinal() > 0
                 && alien.getVidaFinal() > 0;
@@ -26,9 +26,6 @@ public class MatchRaioLaserVsAlien extends Match {
                 System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                 System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
             }
-
-            // Reset Dano
-            Match.raioLaser.setDano(0);
         }
 
         System.out.println("=============");

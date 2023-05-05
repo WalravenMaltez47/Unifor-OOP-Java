@@ -1,5 +1,5 @@
 public class MatchRelampagoVsAlien extends Match {
-    public MatchRelampagoVsAlien() {
+    protected MatchRelampagoVsAlien() {
         for (round = 1; round <= 6
                 && relampago.getVidaFinal() > 0
                 && alien.getVidaFinal() > 0;
@@ -20,9 +20,6 @@ public class MatchRelampagoVsAlien extends Match {
                 System.out.println("Relâmpago adiciona +3 de dano ao alien");
                 alien.getVida(3);
             }
-
-            // Reset Dano
-            Match.relampago.setDano(0);
         }
 
         System.out.println("=================");

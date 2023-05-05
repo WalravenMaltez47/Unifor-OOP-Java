@@ -1,5 +1,5 @@
 public class Relampago extends Personagem {
-    Relampago(int vida) {
+    protected Relampago(int vida) {
         super(vida);
     }
     public void start()  {
@@ -23,6 +23,9 @@ public class Relampago extends Personagem {
             }
             // Punição
             else {
+                // Reset Dano
+                Match.relampago.setDano(0);
+
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {
@@ -52,6 +55,9 @@ public class Relampago extends Personagem {
             }
             // Punição
             else {
+                // Reset Dano
+                Match.relampago.setDano(0);
+
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {
@@ -81,6 +87,9 @@ public class Relampago extends Personagem {
             }
             // Punição
             else {
+                // Reset Dano
+                Match.relampago.setDano(0);
+
                 System.out.println("Punição!");
                 // EASY MODE
                 if (Match.dificuldade.equalsIgnoreCase("EASY")) {

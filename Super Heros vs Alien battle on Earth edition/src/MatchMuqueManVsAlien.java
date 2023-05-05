@@ -1,5 +1,5 @@
 public class MatchMuqueManVsAlien extends Match {
-    public MatchMuqueManVsAlien() {
+    protected MatchMuqueManVsAlien() {
         for (round = 0; round < 6
                 && muqueMan.getVidaFinal()>0
                 && alien.getVidaFinal()>0;
@@ -19,9 +19,6 @@ public class MatchMuqueManVsAlien extends Match {
             if (muqueMan.getVidaFinal() > 0 && alien.getVidaFinal() > 0) {
                 System.out.println(muqueMan.getVida(-5) + " hp ");
             }
-
-            // Reset Dano
-            Match.muqueMan.setDano(0);
         }
 
         System.out.println("=================");

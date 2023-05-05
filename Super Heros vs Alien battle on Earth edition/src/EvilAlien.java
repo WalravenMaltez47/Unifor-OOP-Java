@@ -1,5 +1,5 @@
 public class EvilAlien extends Personagem {
-    EvilAlien(int vida) {
+    protected EvilAlien(int vida) {
         super(vida);
     }
     public void start() {

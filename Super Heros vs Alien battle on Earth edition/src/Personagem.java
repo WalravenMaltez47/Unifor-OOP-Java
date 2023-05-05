@@ -1,7 +1,7 @@
 
 public abstract class Personagem implements InterfaceVida, InterfaceDano {
 
-    // vida
+    // Vida
     public int vida;
     public Personagem(int vida) {
         this.vida = vida;
@@ -16,7 +16,7 @@ public abstract class Personagem implements InterfaceVida, InterfaceDano {
         return Math.max(this.vida, 0);
     }
 
-    // dano
+    // Dano
     public int dano;
     @Override
     public void setDano(int dano) {
@@ -26,6 +26,4 @@ public abstract class Personagem implements InterfaceVida, InterfaceDano {
     public int getDano() {
         return this.dano;
     }
-
-
 }

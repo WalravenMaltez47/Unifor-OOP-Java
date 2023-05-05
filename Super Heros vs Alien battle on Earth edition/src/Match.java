@@ -1,7 +1,7 @@
 public abstract class Match {
     // Setting a vida (HP)
-    static int hpDoHero = 200;
-    static int hpDoAlien = 200;
+    private static int hpDoHero = 200;
+    private static int hpDoAlien = 200;
     static MuqueMan muqueMan = new MuqueMan(hpDoHero);
     static RaioLaser raioLaser = new RaioLaser(hpDoHero);
     static Relampago relampago = new Relampago(hpDoHero);

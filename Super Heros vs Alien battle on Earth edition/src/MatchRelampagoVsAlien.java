@@ -1,5 +1,5 @@
 public class MatchRelampagoVsAlien extends Match {
-    public MatchRelampagoVsAlien() {
+    protected MatchRelampagoVsAlien() {
         for (round = 1; round <= 6
                 && relampago.getVidaFinal() > 0
                 && alien.getVidaFinal() > 0;
@@ -9,8 +9,10 @@ public class MatchRelampagoVsAlien extends Match {
             alien.start();
 
             // Mostra Vida
+            System.out.println();
             System.out.println("Alien está com " + alien.getVida(relampago.getDano()) + " hp ");
             System.out.println("Relâmpago está com " + relampago.getVida(alien.getDano()) + " hp ");
+            System.out.println();
 
             if (relampago.getVidaFinal() > 0 && alien.getVidaFinal() > 0) {
                 System.out.println("SPECIAL SKILL!");

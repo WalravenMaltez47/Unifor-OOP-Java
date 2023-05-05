@@ -1,11 +1,11 @@
-public class Match {
+public abstract class Match {
     // Setting a vida (HP)
-    static int hpDoHero = 200;
-    static int hpDoAlien = 200;
-    static MuqueMan muqueMan = new MuqueMan(hpDoHero);
-    static RaioLaser raioLaser = new RaioLaser(hpDoHero);
-    static Relampago relampago = new Relampago(hpDoHero);
-    static EvilAlien alien = new EvilAlien(hpDoAlien);
+    private static int hpDoHero = 200;
+    private static int hpDoAlien = 200;
+    protected static MuqueMan muqueMan = new MuqueMan(hpDoHero);
+    protected static RaioLaser raioLaser = new RaioLaser(hpDoHero);
+    protected static Relampago relampago = new Relampago(hpDoHero);
+    protected static EvilAlien alien = new EvilAlien(hpDoAlien);
 
     // GENÉRICO
     static String dificuldade;

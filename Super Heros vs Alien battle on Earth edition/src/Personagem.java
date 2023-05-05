@@ -1,9 +1,8 @@
-
 public abstract class Personagem implements InterfaceVida, InterfaceDano {
 
-    // vida
-    public int vida;
-    public Personagem(int vida) {
+    // Vida
+    private int vida;
+    protected Personagem(int vida) {
         this.vida = vida;
     }
     @Override
@@ -16,8 +15,8 @@ public abstract class Personagem implements InterfaceVida, InterfaceDano {
         return Math.max(this.vida, 0);
     }
 
-    // dano
-    public int dano;
+    // Dano
+    private int dano;
     @Override
     public void setDano(int dano) {
         this.dano = dano;
@@ -26,6 +25,4 @@ public abstract class Personagem implements InterfaceVida, InterfaceDano {
     public int getDano() {
         return this.dano;
     }
-
-
 }

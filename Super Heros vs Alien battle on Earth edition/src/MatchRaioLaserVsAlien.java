@@ -1,5 +1,5 @@
 public class MatchRaioLaserVsAlien extends Match {
-    public MatchRaioLaserVsAlien() {
+    protected MatchRaioLaserVsAlien() {
         for (round = 0; round < 6
                 && raioLaser.getVidaFinal() > 0
                 && alien.getVidaFinal() > 0;
@@ -9,18 +9,17 @@ public class MatchRaioLaserVsAlien extends Match {
             raioLaser.start();
             alien.start();
 
-            // Mostra Vida
-            System.out.println();
-            if (raioLaser.getVidaFinal() > 0 && alien.getVidaFinal() > 0 && round == 0) {
+            if (round == 0) {
+                // Mostra Vida
+                System.out.println();
                 System.out.println("Alien está com " + alien.getVida(raioLaser.getDano()) + " hp ");
                 System.out.println("Raio-Laser está com " + raioLaser.getVida(alien.getDano()) + " hp ");
-            }
+                System.out.println();
 
-            // SPECIAL SKILL
-            System.out.println();
-            if (round == 0) {
                 System.out.println("SPECIAL SKILL! Ativada");
-            } else if (round > 0) {
+            }
+            // SPECIAL SKILL
+            else if (round > 0) {
                 int multiplicador_De_Dano = 3 * contadorDeRodada;
                 raioLaser.setDano(multiplicador_De_Dano + raioLaser.getDano());
                 // Mostra Vida

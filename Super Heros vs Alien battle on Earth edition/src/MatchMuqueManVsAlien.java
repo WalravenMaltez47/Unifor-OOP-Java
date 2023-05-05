@@ -1,5 +1,5 @@
 public class MatchMuqueManVsAlien extends Match {
-    public MatchMuqueManVsAlien() {
+    protected MatchMuqueManVsAlien() {
         for (round = 0; round < 6
                 && muqueMan.getVidaFinal()>0
                 && alien.getVidaFinal()>0;

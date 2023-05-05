@@ -4,19 +4,6 @@ public class RandomMethod {
         Random random = new Random();
         return random.nextInt(6) + 1;
     }
-    static public RandomMethod random = new RandomMethod();
-    static public int dado;
+    static RandomMethod random = new RandomMethod();
+    static int dado;
 }
-
-
-/*
-   Uma outra forma de fazer caso queira
-   escolher os valores de cada face do
-    dado e seu tamanho.
-
-   int[] numeros = {1,2,3,4,5,6};
-    public int gerarNumeroAleatorio() {
-        Random random = new Random();
-        int comprimento = random.nextInt(numeros.length);
-        return numeros[comprimento];
-    } */

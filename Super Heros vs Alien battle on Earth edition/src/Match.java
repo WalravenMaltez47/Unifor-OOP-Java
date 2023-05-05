@@ -8,8 +8,8 @@ public abstract class Match {
     protected static EvilAlien alien = new EvilAlien(hpDoAlien);
 
     // GENÉRICO
-    protected static String dificuldade;
-    protected static int round;
-    protected static int contadorDeRodada;
-    protected static String golpe;
+    static String dificuldade;
+    static int round;
+    static int contadorDeRodada;
+    static String golpe;
 }

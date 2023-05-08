@@ -1,6 +1,5 @@
-package Aluno;
-
 import java.util.ArrayList;
+
 public class Aluno {
         String matricula;
         String nome;
@@ -17,8 +16,8 @@ public class Aluno {
         }
 
         public double getCalculoDaMedia() {
-        return media;
-    }
+            return media;
+        }
         public String getMatricula() {
             return matricula;
         }
@@ -28,4 +27,5 @@ public class Aluno {
         public double getNota() {
             return nota;
         }
-}
+    }
+

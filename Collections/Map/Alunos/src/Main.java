@@ -1,14 +1,7 @@
-package Aluno;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
+import java.util.*;
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static ArrayList <Double> nota = new ArrayList<>();
+    static ArrayList<Double> nota = new ArrayList<>();
     static String matricula;
     static String nome;
     public static void setDados() {
@@ -31,7 +24,7 @@ public class Main {
         int quantidadeDeAlunos = scanner.nextInt();
 
         //
-        Map <String, Aluno> aluno = new HashMap<>();
+        Map<String, Aluno> aluno = new HashMap<>();
         for (int i = 0; i < quantidadeDeAlunos; i++) {
             setDados();
             aluno.put(matricula,new Aluno(matricula,nome, new Aluno(nota).getCalculoDaMedia()));

@@ -1,6 +1,4 @@
-package Pedido;
-
-public  class Pedido {
+public class Pedido {
     String chaveDoPedido;
     String item;
     Double valor;
@@ -26,4 +24,3 @@ public  class Pedido {
         return valor;
     }
 }
-

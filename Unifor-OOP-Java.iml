@@ -4,6 +4,13 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Arraylist and Map" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections/ArrayList and Map/Aluno" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections/ArrayList and Map/ListaDeTarefas" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections/ArrayList and Map/Pedido" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections/ghg" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exceptions/GG/MK" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/L/jk" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/L/KK" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

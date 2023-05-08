@@ -1,5 +1,3 @@
-package ListaDeTarefas;
-
 import java.time.LocalDate;
 
 public class Tarefa {

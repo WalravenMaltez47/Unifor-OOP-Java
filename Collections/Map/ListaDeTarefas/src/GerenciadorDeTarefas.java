@@ -1,6 +1,8 @@
-package ListaDeTarefas;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class GerenciadorDeTarefas {
     Scanner scanner = new Scanner(System.in);
@@ -11,7 +13,7 @@ public class GerenciadorDeTarefas {
         String descricao;
 
         // Define the Map
-        Map <String, Tarefa> mapName = new HashMap<>();
+        Map<String, Tarefa> mapName = new HashMap<>();
 
         for (int i = 0; i < 2; i++) {
             System.out.println("===========");

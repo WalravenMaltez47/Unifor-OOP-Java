@@ -1,19 +1,17 @@
-package Pedido;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Lista {
-     static Scanner scanner = new Scanner(System.in);
-     String etiqueta;
-     String item;
-     double valor;
-     Integer i;
+    static Scanner scanner = new Scanner(System.in);
+    String etiqueta;
+    String item;
+    double valor;
+    Integer i;
 
     public Lista() {
 
-        Map <String, Pedido> pedidoMap = new HashMap<>();
+        Map<String, Pedido> pedidoMap = new HashMap<>();
         for (i = 0; i < 2; i++) {
 
             System.out.println("Etiqueta");
@@ -57,5 +55,3 @@ public class Lista {
         }
     }
 }
-
-

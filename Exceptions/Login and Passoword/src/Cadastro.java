@@ -3,5 +3,5 @@ public abstract class Cadastro {
     Scanner scanner = new Scanner(System.in);
     protected String cadastro;
     public abstract void verificarCadastro();
-    public abstract String getCadastro();
+    protected abstract String getCadastro();
 }

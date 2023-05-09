@@ -6,33 +6,31 @@ public class Cadastro {
     private String senha;
     private VerificacaoDeLogin login;
 
+    Cadastro(VerificacaoDeLogin login) {
+        this.login = login;
+    }
+
+    // Setters
     public void setUser() {
         System.out.println("user:");
         user = scanner.next();
-    }
-
-    public void setEmail() {
+    } public void setEmail() {
         System.out.println("email:");
         email = scanner.next();
         new Email(email,this);
-    }
-
-    public void setSenha() {
+    } public void setSenha() {
         System.out.println("senha:");
         senha = scanner.next();
         new Password(senha.trim(),this);
     }
 
+    // Getters
     public String getUser() {return user;}
     public String getEmail() {return email;}
     public String getSenha() {return senha;}
 
-    public void setLogin(VerificacaoDeLogin login) {
-        this.login = login;
-    }
-
+    // Cadastramento
     public void cadastrar() {
-
         setUser();
         setEmail();
         setSenha();
@@ -42,15 +40,15 @@ public class Cadastro {
         System.out.println("==========");
 
         login.verificarLogin(this);
-    }
 
-    public void recadastrar() {
-        boolean recadastramento = true;
-        while (recadastramento) {
-            System.out.println("de novo?");
+    } public void novoCadastrar() {
+        boolean novoCadastramento = true;
+        while (novoCadastramento) {
+            System.out.println("'sim' para um novo cadastro");
+            System.out.println("'sair' para sair");
             String pedido = scanner.next();
             if (pedido.equalsIgnoreCase("sair")) {
-                recadastramento = false;
+                novoCadastramento = false; // break
             }
             else if (pedido.equalsIgnoreCase("sim")) {
                 cadastrar();

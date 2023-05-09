@@ -5,7 +5,7 @@ public class Email {
             if (!email.contains("@")||!email.contains(".com")) {
                 throw new RuntimeException("formato de email invalido");
             }
-        }catch (RuntimeException e) {
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
             verificacaoEmail.setEmail();
         }

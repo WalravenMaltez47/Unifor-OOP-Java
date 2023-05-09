@@ -1,12 +1,9 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         VerificacaoDeLogin login = new VerificacaoDeLogin();
-        Cadastro cadastro = new Cadastro();
-        cadastro.setLogin(login);
+        Cadastro cadastro = new Cadastro(login);
         cadastro.cadastrar();
-        cadastro.recadastrar();
+        cadastro.novoCadastrar();
         login.getUsersList();
     }
 }

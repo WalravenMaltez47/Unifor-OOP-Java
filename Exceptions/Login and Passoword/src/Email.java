@@ -1,20 +1,27 @@
-public class Email extends Cadastro {
-    @Override
-    public void verificarCadastro() {
-        System.out.println("email:");
-        cadastro = scanner.next();
+public class Email {
+
+    Email(String email, Cadastro verificacaoEmail) {
         try {
-            if (!cadastro.contains("@")||!cadastro.contains(".com")) {
-                throw new Exception("email invalido");
+            if (!email.contains("@")||!email.contains(".com")) {
+                throw new RuntimeException("formato de email invalido");
             }
-            System.out.println("email valido");
-        } catch (Exception e) {
+        }catch (RuntimeException e) {
             System.out.println(e.getMessage());
-            verificarCadastro();
+            verificacaoEmail.setEmail();
         }
     }
-    @Override
-    public String getCadastro() {
-        return cadastro;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

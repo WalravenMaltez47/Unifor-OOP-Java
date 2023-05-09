@@ -10,7 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Collections/ghg" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exceptions/GG/MK" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/L/jk" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Collections/Map/bnb" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/L/KK" />
+      <excludeFolder url="file://$MODULE_DIR$/tg" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

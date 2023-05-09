@@ -1,24 +1,13 @@
-public class Password extends Cadastro {
-    @Override
-    public void verificarCadastro() {
-        System.out.println("senha:");
-        cadastro = scanner.next();
-        try {
-            if (!cadastro.contains("!")&&
-                    !cadastro.contains("@")&&
-                    !cadastro.contains("#")&&
-                    !cadastro.contains("$")) {
+public class Password {
 
-                throw new Exception("senha fraca");
+    Password(String senha, Cadastro verifcacaoSenha) {
+        try {
+            if (!senha.contains("!")&&!senha.contains("@")&&senha.length()<8){
+                throw new RuntimeException("senha invalida");
             }
-            System.out.println("senha forte");
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
-            verificarCadastro();
+            verifcacaoSenha.setSenha();
         }
-    }
-    @Override
-    public String getCadastro() {
-        return cadastro;
     }
 }

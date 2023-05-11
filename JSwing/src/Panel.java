@@ -2,9 +2,9 @@ import javax.swing.*;
 
 public class Panel {
 
-    private Buttons buttons = new Buttons();
-    private Label label = new Label();
-    private JPanel panel = new JPanel();
+    private final JPanel panel = new JPanel();
+    private final Buttons buttons = new Buttons();
+    private final Label label = new Label();
 
     protected JPanel getPanel() {
         // Name

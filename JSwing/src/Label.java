@@ -10,11 +10,11 @@ public class Label {
    // Setters
    public void setjLabelName(JLabel jLabelName) {
       this.jLabelName = jLabelName;
-   }public void setjTextFieldName(JTextField jTextFieldName) {
+   } public void setjTextFieldName(JTextField jTextFieldName) {
       this.jTextFieldName = jTextFieldName;
-   }public void setjLabelPassword(JLabel jLabelPassword) {
+   } public void setjLabelPassword(JLabel jLabelPassword) {
       this.jLabelPassword = jLabelPassword;
-   }public void setjTextFieldPassword(JTextField jTextFieldPassword) {
+   } public void setjTextFieldPassword(JTextField jTextFieldPassword) {
       this.jTextFieldPassword = jTextFieldPassword;
    }
 

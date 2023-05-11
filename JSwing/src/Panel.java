@@ -1,18 +1,22 @@
 import javax.swing.*;
 
 public class Panel {
+
     private Buttons buttons = new Buttons();
     private Label label = new Label();
-    private JPanel jPanel = new JPanel();
+    private JPanel panel = new JPanel();
 
-    protected JPanel getjPanel() {
-        jPanel.add(label.getjLabelName());
-        jPanel.add(label.getjTextFieldName());
-        jPanel.add(buttons.getjButton1());
+    protected JPanel getPanel() {
+        // Name
+        panel.add(label.getjLabelName());
+        panel.add(label.getjTextFieldName());
+        panel.add(buttons.getName());
 
-        jPanel.add(label.getjLabelPassword());
-        jPanel.add(label.getjTextFieldPassword());
-        jPanel.add(buttons.getjButton2());
-        return jPanel;
+        // Password
+        panel.add(label.getjLabelPassword());
+        panel.add(label.getjTextFieldPassword());
+        panel.add(buttons.getPassword());
+
+        return panel;
     }
 }

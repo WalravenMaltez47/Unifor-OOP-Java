@@ -1,17 +1,18 @@
 import javax.swing.*;
 
 public class MainJFrame {
-    private JFrame jFrame = new JFrame();
+
+    private JFrame frame = new JFrame();
     private Panel panel = new Panel();;
 
     MainJFrame() {
-        jFrame.setTitle("Java");
-        jFrame.setSize(400,200);
+        frame.setTitle("Java");
+        frame.setSize(400,200);
         // jFrame.setResizable(false); // impede de seu comprimento e largura ser modificado
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        jFrame.setContentPane(panel.getjPanel());
-        jFrame.pack();
-        jFrame.setVisible(true);
+        frame.setContentPane(panel.getPanel());
+        frame.pack();
+        frame.setVisible(true);
     }
 }

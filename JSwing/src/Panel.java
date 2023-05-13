@@ -8,6 +8,7 @@ public class Panel {
 
     protected JPanel getPanel() {
         // Name
+        label.setjLabelName(new JLabel("pedro")); // Altera o valor
         panel.add(label.getjLabelName());
         panel.add(label.getjTextFieldName());
         panel.add(buttons.getName());

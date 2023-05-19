@@ -1,21 +1,26 @@
 import javax.swing.*;
+import java.awt.*;
 
-public class Buttons {
+public class Buttons implements InterfacePanel {
 
-   private JButton name = new JButton("confirm");
-   private JButton password = new JButton("confirm");
+   private final JButton button ;
 
-   // Setters
-   protected void setName(JButton name) {
-       this.name = name;
-   } protected void setPassword(JButton password) {
-       this.password = password;
+   Buttons(String buttonText) {
+       button = new JButton(buttonText);
    }
 
-   // Getters
-   protected JButton getName() {
-       return name;
-   } protected JButton getPassword() {
-       return password;
+   public void message(JTextField textName, JTextField textPassword /*, JFrame frame*/) {
+       button.addActionListener(e -> {
+           // muda o que tem no textName para textPassword
+           textPassword.setText(textName.getText());
+           JOptionPane.showMessageDialog(null,textPassword.getText());
+           // frame.dispose(); // para encerrar o programa
+       });
+   }
+
+   @Override
+   public void addToPanel(JPanel panel) {
+       button.setSize(5,5);
+       panel.add(button,BorderLayout.SOUTH);
    }
 }

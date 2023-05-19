@@ -11,8 +11,7 @@ public class Buttons implements InterfacePanel {
 
    public void message(JTextField textName, JTextField textPassword /*, JFrame frame*/) {
        button.addActionListener(e -> {
-           // muda o que tem no textName para textPassword
-           textPassword.setText(textName.getText());
+           textPassword.setText(textName.getText()); // muda o que tem no textName para textPassword
            JOptionPane.showMessageDialog(null,textPassword.getText());
            // frame.dispose(); // para encerrar o programa
        });

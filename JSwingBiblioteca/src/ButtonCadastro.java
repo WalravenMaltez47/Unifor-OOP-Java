@@ -9,7 +9,7 @@ public class ButtonCadastro implements ActionListener {
     JButton addLivro, retiraLivro;
     LabelAndText textoDoCadastro;
 
-
+    // Cria a biblioteca
     HashMap<String,String> biblioteca = new HashMap<>();
     public HashMap<String, String> getBiblioteca() {
         return biblioteca;
@@ -28,7 +28,6 @@ public class ButtonCadastro implements ActionListener {
         retiraLivro.addActionListener(this);
     }
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -37,7 +36,6 @@ public class ButtonCadastro implements ActionListener {
             biblioteca.put(this.textoDoCadastro.getTextFieldTitulo().getText(), this.textoDoCadastro.getTextFieldAutor().getText());
             JOptionPane.showMessageDialog(null, "Book added successfully!");
         }
-
         // retira
         else if (e.getSource()==retiraLivro) {
             biblioteca.remove(this.textoDoCadastro.getTextFieldTitulo().getText(), this.textoDoCadastro.getTextFieldAutor().getText());

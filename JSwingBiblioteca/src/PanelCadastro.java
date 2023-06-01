@@ -10,14 +10,14 @@ public class PanelCadastro extends JFrame {
         super("Cadastro do livro");
 
         // Cadastro
-        LabelAndText cadastramento = new LabelAndText(panel);
-        ButtonCadastro botao = new ButtonCadastro(panel,cadastramento);
+        LabelAndText labelAndText = new LabelAndText(this.panel);
+        ButtonCadastro cadastro = new ButtonCadastro(this.panel,labelAndText);
 
         // Biblioteca
-        biblioteca = new Biblioteca(panel, new ButtonBiblioteca(botao,cadastramento));
+        biblioteca = new Biblioteca(this.panel, new ButtonBiblioteca(cadastro,labelAndText));
 
         pack();
-        setContentPane(panel);
+        setContentPane(this.panel);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

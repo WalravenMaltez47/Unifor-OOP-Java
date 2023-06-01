@@ -6,21 +6,19 @@ import java.awt.event.ActionListener;
 
 public class ButtonBiblioteca implements ActionListener {
 
-    JButton button;
-    LabelAndText labelAndText;
+    JButton button; public JButton getButton() {
+        return button;
+    }
     ButtonCadastro buttonCadastro;
+    LabelAndText labelAndText;
 
-
-    ButtonBiblioteca(ButtonCadastro buttonCadastro,LabelAndText text) {
+    // Button para pegar a "chave" da biblioteca
+    ButtonBiblioteca(ButtonCadastro buttonCadastro, LabelAndText text) {
         this.buttonCadastro = buttonCadastro;
         this.labelAndText = text;
 
         button = new JButton("Search");
         button.addActionListener(this);
-    }
-
-    public JButton getButton() {
-        return button;
     }
 
     @Override

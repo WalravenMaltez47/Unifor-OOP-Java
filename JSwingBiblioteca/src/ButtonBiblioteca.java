@@ -9,22 +9,23 @@ public class ButtonBiblioteca implements ActionListener {
     JButton button; public JButton getButton() {
         return button;
     }
-    ButtonCadastro buttonCadastro;
-    LabelAndText labelAndText;
+    ButtonCadastro biblioteca;
+    LabelAndText tFieldTitulo;
 
-    // Button para pegar a "chave" da biblioteca
-    ButtonBiblioteca(ButtonCadastro buttonCadastro, LabelAndText text) {
-        this.buttonCadastro = buttonCadastro;
-        this.labelAndText = text;
+    // Button
+    ButtonBiblioteca(ButtonCadastro biblioteca, LabelAndText tFieldTitulo) {
+        this.biblioteca = biblioteca;
+        this.tFieldTitulo = tFieldTitulo;
 
         button = new JButton("Search");
         button.addActionListener(this);
     }
 
+    // Action
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button) {
-            JOptionPane.showMessageDialog(null,this.buttonCadastro.getBiblioteca().get(labelAndText.getTextFieldTitulo().getText()));
+            JOptionPane.showMessageDialog(null,this.biblioteca.getBiblioteca().get(tFieldTitulo.getTextFieldTitulo().getText()));
         }
     }
 }

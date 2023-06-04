@@ -15,7 +15,7 @@ public class ButtonCadastro implements ActionListener {
         return biblioteca;
     }
 
-    // Botao
+    // Button
     ButtonCadastro(JPanel panel, LabelAndText textoDoCadastro) {
         this.textoDoCadastro = textoDoCadastro;
 
@@ -28,6 +28,7 @@ public class ButtonCadastro implements ActionListener {
         retiraLivro.addActionListener(this);
     }
 
+    // Action
     @Override
     public void actionPerformed(ActionEvent e) {
 

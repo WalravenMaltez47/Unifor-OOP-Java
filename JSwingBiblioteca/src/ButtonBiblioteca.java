@@ -24,7 +24,10 @@ public class ButtonBiblioteca implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button) {
-            JOptionPane.showMessageDialog(null,this.buttonCadastro.getBiblioteca().get(labelAndText.getTextFieldTitulo().getText()));
+            JOptionPane.showMessageDialog(
+                    null,
+                    this.buttonCadastro.getBiblioteca().get(labelAndText.getTextFieldTitulo().getText())
+            );
         }
     }
 }

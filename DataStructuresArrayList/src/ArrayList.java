@@ -1,36 +1,48 @@
-public class ArrayList {
-    private String[] array;
+public class ArrayList<T> implements Interface<T>{
+
+    private T[] array;
     private int size = 0;
-
-    // GETTERS
-    ArrayList(String [] array) {
-        this.array = array;
-    }
-
-    public int getSize() {
-        return size;
-    }
-    public String getArrayIndexValue(int i) {
-        return array[i];
+    
+    @SuppressWarnings("unchecked")
+    ArrayList() {
+        this.array = (T[]) new Object[10];
     }
 
     // ADD
-    public void add(String s) {
-        array[size] = s;
+    @Override
+    public void add(T elemento) {
+        array[size] = elemento;
         size++;
 
-        if (array.length == size) {
-            String[] newArray = new String[array.length*2];
+        if (size == array.length) {
+            @SuppressWarnings("unchecked")
+            T[] newArray = (T[]) new Object[array.length * 2];
             System.arraycopy(array, 0, newArray, 0, array.length);
             array = newArray;
         }
     }
-
+    
     // REMOVE
-    public void removeArrayIndexValue(int index) {
-        for (int i = index; i < size-1; i++) {
-            array[i] = array[i+1];
+    @Override
+    public void remove(int index) {
+        array[index] = array[index + 1];
+        
+        if (index == size - 1) {
+            size--;
+            return;
         }
-        size--;
+        
+        remove(index + 1);
+    }
+
+    // Getters
+    @Override
+    public int getSize() {
+        return size;
+    }
+
+    @Override
+    public T get(int i) {
+        return array[i];
     }
 }

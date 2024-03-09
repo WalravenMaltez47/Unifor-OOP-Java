@@ -1,3 +1,9 @@
 {
-    "DockerRun.DisableAutoGenerateConfig": true
+    "DockerRun.DisableAutoGenerateConfig": true,
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "DataStructures/DataStructuresArrayList",
+        "DataStructures/ArrayList",
+        "DataStructures/LinkedList"
+    ]
 }

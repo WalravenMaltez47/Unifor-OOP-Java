@@ -1,0 +1,9 @@
+{
+    "DockerRun.DisableDockerrc": true,
+    "workbench.editor.defaultBinaryEditor": "default",
+    "accessibility.signals.sounds.volume": 0,
+    "files.autoSave": "afterDelay",
+    "auto-close-tag.fullMode": true,
+    "better-comments.highlightPlainText": true,
+    "keyboard.touchbar.enabled": true
+}

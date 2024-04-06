@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "LinkedList/src",
+        "ArrayList",
+        "ArrayList2"
+    ]
+}

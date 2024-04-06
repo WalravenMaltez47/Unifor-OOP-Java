@@ -1,18 +1,19 @@
 import java.util.NoSuchElementException;
 
-public class LinkedList {
-    private static class Nodo {
-        public int valor;
-        public Nodo proximo;
+public class LinkedList<T extends Comparable<T>> {
+    private static class Node<T> {
+        public T valor;
+        public Node<T> next;
 
-        public Nodo(int valor) {
+        Node(T valor) {
             this.valor = valor;
-            this.proximo = null;
+            this.next = null;
         }
     }
 
-    private Nodo primeiro;
-    private Nodo ultimo;
+
+    private Node<T> primeiro;
+    private Node<T> ultimo;
     private int tamanho;
 
     LinkedList() {
@@ -21,23 +22,24 @@ public class LinkedList {
         this.tamanho = 0;
     }
 
-    public void insereInicio(int valor) {
-        Nodo novoNodo = new Nodo(valor);
+    public void insereInicio(T valor) {
+        Node<T> newNode = new Node<>(valor);
         if (primeiro == null) {
-            primeiro = novoNodo;
-            ultimo = novoNodo;
-        } else {
-            novoNodo.proximo = primeiro;
-            primeiro = novoNodo;
-        }
-        tamanho++;
+            primeiro = newNode;
+            ultimo = newNode;
+       }
+
+       else {
+            newNode.next = primeiro;
+            primeiro = newNode;
+       }
     }
 
     public void removeInicio() {
         if (primeiro == null) {
             throw new NoSuchElementException("A lista está vazia");
         } else {
-            primeiro = primeiro.proximo;
+            primeiro = primeiro.next;
             tamanho--;
             if (tamanho == 0) {
                 ultimo = null;
@@ -46,13 +48,13 @@ public class LinkedList {
     }
     
 
-    public void insereFinal(int valor) {
-        Nodo novoNodo = new Nodo(valor);
+    public void insereFinal(T valor) {
+        Node<T> novoNodo = new Node<>(valor);
         if (ultimo == null) {
             primeiro = novoNodo;
             ultimo = novoNodo;
         } else {
-            ultimo.proximo = novoNodo;
+            ultimo.next = novoNodo;
             ultimo = novoNodo;
         }
         tamanho++;
@@ -66,18 +68,18 @@ public class LinkedList {
                 primeiro = null;
                 ultimo = null;
             } else {
-                Nodo atual = primeiro;
-                while (atual.proximo != ultimo) {
-                    atual = atual.proximo;
+                Node<T> atual = primeiro;
+                while (atual.next != ultimo) {
+                    atual = atual.next;
                 }
-                atual.proximo = null;
+                atual.next = null;
                 ultimo = atual;
             }
             tamanho--;
         }
     }
 
-    public void inserePosicao(int valor, int posicao) {
+    public void inserePosicao(T valor, int posicao) {
         if (posicao < 0 || posicao > tamanho) {
             throw new IndexOutOfBoundsException("Posição inválida");
         }
@@ -87,13 +89,13 @@ public class LinkedList {
         } else if (posicao == tamanho) {
             insereFinal(valor);
         } else {
-            Nodo novoNodo = new Nodo(valor);
-            Nodo atual = primeiro;
+            Node<T> novoNodo = new Node<>(valor);
+            Node<T> atual = primeiro;
             for (int i = 0; i < posicao - 1; i++) {
-                atual = atual.proximo;
+                atual = atual.next;
             }
-            novoNodo.proximo = atual.proximo;
-            atual.proximo = novoNodo;
+            novoNodo.next = atual.next;
+            atual.next = novoNodo;
             tamanho++;
         }
     }
@@ -108,21 +110,21 @@ public class LinkedList {
         } else if (posicao == tamanho - 1) {
             removeFinal();
         } else {
-            Nodo atual = primeiro;
+            Node<T> atual = primeiro;
             for (int i = 0; i < posicao - 1; i++) {
-                atual = atual.proximo;
+                atual = atual.next;
             }
-            atual.proximo = atual.proximo.proximo;
+            atual.next = atual.next.next;
             tamanho--;
         }
     }
 
     public void imprimirLista() {
-        Nodo atual = primeiro;
+        Node<T> atual = primeiro;
         System.out.print("Lista: ");
         while (atual != null) {
             System.out.print(atual.valor + " ");
-            atual = atual.proximo;
+            atual = atual.next;
         }
         System.out.println();
     }

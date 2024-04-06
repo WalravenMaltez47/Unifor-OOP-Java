@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-    LinkedList lista = new LinkedList(); 
+    LinkedList<Integer> lista = new LinkedList<>(); 
     lista.insereInicio(3);
     lista.insereInicio(2);
     lista.insereInicio(1);

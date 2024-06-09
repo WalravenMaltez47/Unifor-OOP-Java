@@ -1,7 +1,29 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(5);
+        try (Scanner scanner = new Scanner(System.in)) {
+            int testCases = scanner.nextInt();
+            
+            for (int t = 1; t <= testCases; t++) {
+                int n = scanner.nextInt();
+                ArvoreBinariaBusca arvore = new ArvoreBinariaBusca();
+                
+                for (int i = 0; i < n; i++) {
+                    arvore.insere(scanner.nextInt());
+                }
+                
+                System.out.println("Case " + t + ":");
+                System.out.print("Pre.: ");
+                arvore.imprimePreOrdem();
+                System.out.print("In..: ");
+                arvore.imprimeEmOrdem();
+                System.out.print("Post: ");
+                arvore.imprimePosOrdem();
+
+                System.out.println();
+            }
+        }
     }
 }
 

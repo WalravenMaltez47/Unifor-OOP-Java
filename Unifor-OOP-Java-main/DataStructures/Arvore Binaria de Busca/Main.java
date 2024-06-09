@@ -140,6 +140,7 @@ class ArvoreBinariaBusca {
         }
     }
 
+    @SuppressWarnings("unused")
     private Nodo maiorElemento(Nodo nodo) {
         while (nodo.direito != null) {
             nodo = nodo.direito;
@@ -171,9 +172,9 @@ class ArvoreBinariaBusca {
             nodo.direito = this.remove(elemento, nodo.direito);
         } else {
 
-//	    	if(nodo.esquerdo == null && nodo.direito == null) {
-//	    		return null;
-//	    	}
+            // if(nodo.esquerdo == null && nodo.direito == null) {
+            // return null;
+            // }
 
             if (nodo.esquerdo == null) {
                 this.nElementos--;
@@ -270,7 +271,7 @@ class FilaDinamica<T> {
             System.out.print(cursor.elemento + " ");
             cursor = cursor.proximo;
         }
-        if(this.nElementos == 0)
+        if (this.nElementos == 0)
             System.out.println("] Inicio: " + this.inicio + ", Fim: " + this.fim);
         else
             System.out.println("] Inicio: " + this.inicio.elemento + ", Fim: " + this.fim.elemento);
@@ -286,7 +287,7 @@ class FilaDinamica<T> {
 
         Nodo nodoRemovido = this.inicio;
 
-        if(this.nElementos == 1) {
+        if (this.nElementos == 1) {
             this.inicio = null;
             this.fim = null;
         } else {
